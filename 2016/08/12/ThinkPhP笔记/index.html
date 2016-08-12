@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/08/12/ThinkPhP笔记/index.html">
 <meta property="og:site_name" content="EvilAnne's Blog">
 <meta property="og:description" content="这段时间看审计，看到了很多自己无法看懂的所以无法进行跟踪程序，看到一些框架比如像thinkphp yii之类的，而这里我想要继续往下看就得明白thinkphp的一些操作。其实对于php我而言，大多数东西我都懂只是很少去写代码，所以暂时还没有开发的能力〜 哈哈哈">
-<meta property="og:updated_time" content="2016-08-12T07:32:43.197Z">
+<meta property="og:updated_time" content="2016-08-12T07:35:44.561Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ThinkPhP笔记">
 <meta name="twitter:description" content="这段时间看审计，看到了很多自己无法看懂的所以无法进行跟踪程序，看到一些框架比如像thinkphp yii之类的，而这里我想要继续往下看就得明白thinkphp的一些操作。其实对于php我而言，大多数东西我都懂只是很少去写代码，所以暂时还没有开发的能力〜 哈哈哈">
@@ -319,29 +319,8 @@
       
         <p>这段时间看审计，看到了很多自己无法看懂的所以无法进行跟踪程序，看到一些框架比如像thinkphp yii之类的，而这里我想要继续往下看就得明白thinkphp的一些操作。其实对于php我而言，大多数东西我都懂只是很少去写代码，所以暂时还没有开发的能力〜 哈哈哈</p>
 <a id="more"></a>
-<h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><h4 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h4><p><code>www  WEB部署目录（或者子目录）
-├─index.php       入口文件
-├─README.md       README文件
-├─composer.json   Composer定义文件
-├─Application     应用目录
-├─Public          资源文件目录
-└─ThinkPHP        框架目录</code></p>
-<h5 id="框架核心目录"><a href="#框架核心目录" class="headerlink" title="框架核心目录"></a>框架核心目录</h5><p><code>├─ThinkPHP 框架系统目录（可以部署在非web目录下面）
-│  ├─Common       核心公共函数目录
-│  ├─Conf         核心配置目录 
-│  ├─Lang         核心语言包目录
-│  ├─Library      框架类库目录
-│  │  ├─Think     核心Think类库包目录
-│  │  ├─Behavior  行为类库目录
-│  │  ├─Org       Org类库包目录
-│  │  ├─Vendor    第三方类库目录
-│  │  ├─ ...      更多类库目录
-│  ├─Mode         框架应用模式目录
-│  ├─Tpl          系统模板目录
-│  ├─LICENSE.txt  框架授权协议文件
-│  ├─logo.png     框架LOGO文件
-│  ├─README.txt   框架README文件
-│  └─index.php    框架入口文件</code></p>
+<h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><h4 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">www  WEB部署目录（或者子目录）</span><br><span class="line">├─index.php       入口文件</span><br><span class="line">├─README.md       README文件</span><br><span class="line">├─composer.json   Composer定义文件</span><br><span class="line">├─Application     应用目录</span><br><span class="line">├─Public          资源文件目录</span><br><span class="line">└─ThinkPHP        框架目录</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+<h5 id="框架核心目录"><a href="#框架核心目录" class="headerlink" title="框架核心目录"></a>框架核心目录</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">├─ThinkPHP 框架系统目录（可以部署在非web目录下面）</span><br><span class="line">│  ├─Common       核心公共函数目录</span><br><span class="line">│  ├─Conf         核心配置目录 </span><br><span class="line">│  ├─Lang         核心语言包目录</span><br><span class="line">│  ├─Library      框架类库目录</span><br><span class="line">│  │  ├─Think     核心Think类库包目录</span><br><span class="line">│  │  ├─Behavior  行为类库目录</span><br><span class="line">│  │  ├─Org       Org类库包目录</span><br><span class="line">│  │  ├─Vendor    第三方类库目录</span><br><span class="line">│  │  ├─ ...      更多类库目录</span><br><span class="line">│  ├─Mode         框架应用模式目录</span><br><span class="line">│  ├─Tpl          系统模板目录</span><br><span class="line">│  ├─LICENSE.txt  框架授权协议文件</span><br><span class="line">│  ├─logo.png     框架LOGO文件</span><br><span class="line">│  ├─README.txt   框架README文件</span><br><span class="line">│  └─index.php    框架入口文件</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
 <h4 id="入口文件"><a href="#入口文件" class="headerlink" title="入口文件"></a>入口文件</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">define(<span class="string">'APP_PATH'</span>,<span class="string">'./Application/'</span>);</span><br><span class="line"><span class="keyword">require</span> <span class="string">'./ThinkPHP/ThinkPHP.php'</span>;</span><br></pre></td></tr></table></figure>
 <p>当执行时，会在Application生成：</p>
 <p><code>Application
