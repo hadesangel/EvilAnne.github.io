@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="EvilAnne's Blog">
 <meta property="og:description" content="对Docker蛮感兴趣的主要是简单，其次功能真的强大能帮我节省很多的时间，更多的是不会占用我电脑的空间。其实主要节省时间是我最喜欢的，只需要做一次足已不需要重复的造轮子。
 可以播放音乐哦！">
-<meta property="og:updated_time" content="2016-11-11T08:03:36.516Z">
+<meta property="og:updated_time" content="2016-11-11T08:05:05.717Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker学习笔记">
 <meta name="twitter:description" content="对Docker蛮感兴趣的主要是简单，其次功能真的强大能帮我节省很多的时间，更多的是不会占用我电脑的空间。其实主要节省时间是我最喜欢的，只需要做一次足已不需要重复的造轮子。
@@ -436,18 +436,7 @@ v1 ping attempt failed with error: Get https://172.7.15.106:5000/v1/_ping: EOF. 
 <h4 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h4><blockquote>
 <p>Dockerfile 分为四部分:基础镜像信息、维护者信息、镜像操作指令和容 器启动时执行指令。</p>
 </blockquote>
-<p><code>FROM          指定一个镜像
-MAINTAINER     指定维护者信息。
-RUN          执行命令
-CMD     指定启动容器时执行的命令,每个 Dockerfile 只只能有一条cmd命令
-EXPOSE     Docker 服务端容器暴露的端口号
-ENV     指定一个环境变量
-ADD     该命令将复制指定的&lt;src&gt;到容器中的&lt;dest&gt;
-COPY
-ENTRYPOINT
-VOLUME     创建一个可以从本地主机或其他容器挂载的挂载点
-USER     指定运行容器时的用户名或 UID,
-WORKDIR     指令配置工作目录</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">FROM          指定一个镜像</span><br><span class="line">MAINTAINER     指定维护者信息。</span><br><span class="line">RUN          执行命令</span><br><span class="line">CMD     指定启动容器时执行的命令,每个 Dockerfile 只只能有一条cmd命令</span><br><span class="line">EXPOSE     Docker 服务端容器暴露的端口号</span><br><span class="line">ENV     指定一个环境变量</span><br><span class="line">ADD     该命令将复制指定的&lt;src&gt;到容器中的&lt;dest&gt;</span><br><span class="line">COPY</span><br><span class="line">ENTRYPOINT</span><br><span class="line">VOLUME     创建一个可以从本地主机或其他容器挂载的挂载点</span><br><span class="line">USER     指定运行容器时的用户名或 UID,</span><br><span class="line">WORKDIR     指令配置工作目录</span><br></pre></td></tr></table></figure>
 <p>利用 Dockerfile 来创建镜像</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">This is a comment</span><br><span class="line">FROM ubuntu:14.04</span><br><span class="line">MAINTAINER Docker Newbee &lt;newbee@docker.com&gt;</span><br><span class="line">RUN apt-get -qq update</span><br><span class="line">RUN apt-get -qqy install ruby ruby-dev</span><br><span class="line">RUN gem install sinatra</span><br></pre></td></tr></table></figure>
 <p>执行：<br><code>docker build /root/docker/</code></p>
