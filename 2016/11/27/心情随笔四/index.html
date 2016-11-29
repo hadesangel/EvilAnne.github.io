@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="EvilAnne's Blog">
 <meta property="og:description" content="可以暂停音乐哦！">
 <meta property="og:image" content="http://i.imgur.com/CdQJ51i.jpg?2">
-<meta property="og:updated_time" content="2016-11-27T08:01:01.070Z">
+<meta property="og:updated_time" content="2016-11-29T17:20:32.372Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="心情随笔四">
 <meta name="twitter:description" content="可以暂停音乐哦！">
@@ -329,7 +329,10 @@
 <p>体验了一次异地恋，真的很不好 死也不要异地恋了，我想我家妮子了，你在广东过的还好吗？  天气冷有多穿几件衣服吗？<br>我们目前还是有许多矛盾，我不应该拿情商低不会讲话来当借口，喜欢你就要多多少少为你改变。<br>我家妮子可是超级可爱的（主要还是漂亮啦！）皮肤白白天根本就不需要画妆，大街上所谓的美女大多数都是涂了很厚的面粉如果不画妆整个脸可能会是一个月球表面，还可以往里面注入些水。 妮子对我很好，遇到她真是我的福气，一个体贴的人  一个善良的人，一个聪明的人，有了你 在街上所谓的美女我都懒着看一眼，有了你我觉得我是最幸福的好吗？  我们还有好长的路要一起加油一起改变才能到以后呢。</p>
 <p><img src="http://i.imgur.com/CdQJ51i.jpg?2" alt=""></p>
 <pre><code>“－－幸福来的不容易，我会更加珍惜你。”
-</code></pre>
+</code></pre><hr>
+<p>前段时间有空闲时间看了下Python，而这个月又忙其它最关键的时候了，所以没有学习。<br>贴出之前抄的代码。爬美女图片的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> page <span class="keyword">in</span> range(<span class="number">700</span>):</span><br><span class="line">    url = <span class="string">'http://www.dbmeinv.com/dbgroup/show.htm?cid=2&amp;pager_offset=&#123;&#125;'</span>.format(page)</span><br><span class="line">    req = requests.get(url)</span><br><span class="line">    htmlcode = req.text</span><br><span class="line">    soup = BeautifulSoup(htmlcode,<span class="string">'html.parser'</span>)</span><br><span class="line">    <span class="keyword">for</span> imageurl <span class="keyword">in</span> soup.select(<span class="string">'.height_min'</span>):</span><br><span class="line">        link = imageurl.get(<span class="string">'src'</span>)</span><br><span class="line">        x = time.strftime(<span class="string">'%H-%M-%S'</span>)+random.choice(<span class="string">'qwertyuiopasdfghjklzxcvbnm'</span>)</span><br><span class="line">        urllib.request.urlretrieve(link,<span class="string">'/root/python3/1/%s.jpg'</span>%x)</span><br><span class="line">        print(x)</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
