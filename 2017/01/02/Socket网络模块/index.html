@@ -90,12 +90,13 @@
 <meta property="og:url" content="http://yoursite.com/2017/01/02/Socket网络模块/index.html">
 <meta property="og:site_name" content="EvilAnne's Blog">
 <meta property="og:description" content="很多编程语言都有Socket为了创立通讯，最接看了视频只讲了很小一部分socket这方向的，所以记录下笔记以写一个简单的扫描器为例子，除了练习重复造些轮子像扫描器有python-nmap模块功能也是很强大，再加上它的NSE一些模块各种需求足够了。">
+<meta property="og:image" content="http://i.imgur.com/gaKySn1.jpg">
 <meta property="og:image" content="http://i.imgur.com/5EdWhaf.jpg">
-<meta property="og:updated_time" content="2017-01-02T10:05:13.302Z">
+<meta property="og:updated_time" content="2017-01-04T08:09:38.952Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Socket网络模块">
 <meta name="twitter:description" content="很多编程语言都有Socket为了创立通讯，最接看了视频只讲了很小一部分socket这方向的，所以记录下笔记以写一个简单的扫描器为例子，除了练习重复造些轮子像扫描器有python-nmap模块功能也是很强大，再加上它的NSE一些模块各种需求足够了。">
-<meta name="twitter:image" content="http://i.imgur.com/5EdWhaf.jpg">
+<meta name="twitter:image" content="http://i.imgur.com/gaKySn1.jpg">
 
 
 
@@ -319,7 +320,8 @@
       
 
       
-        <p>很多编程语言都有Socket为了创立通讯，最接看了视频只讲了很小一部分socket这方向的，所以记录下笔记以写一个简单的扫描器为例子，除了练习重复造些轮子像扫描器有python-nmap模块功能也是很强大，再加上它的NSE一些模块各种需求足够了。</p>
+        <p><img src="http://i.imgur.com/gaKySn1.jpg" alt=""></p>
+<p>很多编程语言都有Socket为了创立通讯，最接看了视频只讲了很小一部分socket这方向的，所以记录下笔记以写一个简单的扫描器为例子，除了练习重复造些轮子像扫描器有python-nmap模块功能也是很强大，再加上它的NSE一些模块各种需求足够了。</p>
 <a id="more"></a>
 <h3 id="TCP客户端"><a href="#TCP客户端" class="headerlink" title="TCP客户端"></a>TCP客户端</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> socket <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">target_host = <span class="string">'127.0.0.1'</span></span><br><span class="line">target_port = <span class="number">9999</span></span><br><span class="line"></span><br><span class="line">client = socket(AF_INET,SOCK_STREAM)</span><br><span class="line">client.connect((target_host,target_port))</span><br><span class="line">client.send(<span class="string">b"Python tcp socket Test\r\n"</span>)</span><br><span class="line">response = client.recv(<span class="number">4096</span>)</span><br><span class="line">print(response)</span><br></pre></td></tr></table></figure>
 <blockquote>
