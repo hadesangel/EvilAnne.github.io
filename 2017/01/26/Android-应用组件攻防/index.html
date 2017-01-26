@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="CRLF," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,20 +84,25 @@
 
 
 
-<meta name="description" content="最近在写课件，做环境难我还没有说啥，让我写课件简直让人头疼还要写实验的场景，一直抱怨这样的客户怎么能这样子呢， 在没开始做之前又不说，做完后各种要求。好了不抱怨了不管怎样还是有所成长的。">
+<meta name="description">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CRLF注入">
-<meta property="og:url" content="http://yoursite.com/2016/06/21/CRLF注入/index.html">
+<meta property="og:title" content="Android 应用组件攻防">
+<meta property="og:url" content="http://yoursite.com/2017/01/26/Android-应用组件攻防/index.html">
 <meta property="og:site_name" content="EvilAnne's Blog">
-<meta property="og:description" content="最近在写课件，做环境难我还没有说啥，让我写课件简直让人头疼还要写实验的场景，一直抱怨这样的客户怎么能这样子呢， 在没开始做之前又不说，做完后各种要求。好了不抱怨了不管怎样还是有所成长的。">
-<meta property="og:image" content="http://i.imgur.com/wQBrUC5.png">
-<meta property="og:image" content="http://i.imgur.com/szlBqHS.png">
-<meta property="og:image" content="http://i.imgur.com/lMkHq6J.png">
-<meta property="og:updated_time" content="2016-06-21T09:12:21.933Z">
+<meta property="og:description">
+<meta property="og:image" content="http://i.imgur.com/eIYJeHa.jpg">
+<meta property="og:image" content="http://i.imgur.com/SKQGwnu.png">
+<meta property="og:image" content="http://i.imgur.com/2cGG85Z.png">
+<meta property="og:image" content="http://i.imgur.com/HhC6nNM.png">
+<meta property="og:image" content="http://i.imgur.com/tnlxZbV.png">
+<meta property="og:image" content="http://i.imgur.com/6FbdLgf.png">
+<meta property="og:image" content="http://i.imgur.com/Lj5y8JC.png">
+<meta property="og:image" content="http://i.imgur.com/jXuPuKB.png">
+<meta property="og:updated_time" content="2017-01-26T12:32:46.682Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CRLF注入">
-<meta name="twitter:description" content="最近在写课件，做环境难我还没有说啥，让我写课件简直让人头疼还要写实验的场景，一直抱怨这样的客户怎么能这样子呢， 在没开始做之前又不说，做完后各种要求。好了不抱怨了不管怎样还是有所成长的。">
-<meta name="twitter:image" content="http://i.imgur.com/wQBrUC5.png">
+<meta name="twitter:title" content="Android 应用组件攻防">
+<meta name="twitter:description">
+<meta name="twitter:image" content="http://i.imgur.com/eIYJeHa.jpg">
 
 
 
@@ -126,7 +131,7 @@
     })();
 </script>
 
-  <title> CRLF注入 | EvilAnne's Blog </title>
+  <title> Android 应用组件攻防 | EvilAnne's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -266,7 +271,7 @@
             
             
               
-                CRLF注入
+                Android 应用组件攻防
               
             
           </h1>
@@ -278,8 +283,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-21T17:11:43+08:00" content="2016-06-21">
-              2016-06-21
+            <time itemprop="dateCreated" datetime="2017-01-26T20:32:15+08:00" content="2017-01-26">
+              2017-01-26
             </time>
           </span>
 
@@ -292,8 +297,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/网络安全/" itemprop="url" rel="index">
-                    <span itemprop="name">网络安全</span>
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
                   </a>
                 </span>
 
@@ -308,8 +313,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/21/CRLF注入/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/21/CRLF注入/" itemprop="commentsCount"></span>
+                <a href="/2017/01/26/Android-应用组件攻防/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/26/Android-应用组件攻防/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -332,31 +337,44 @@
       
 
       
-        <hr>
-<p>最近在写课件，做环境难我还没有说啥，让我写课件简直让人头疼还要写实验的场景，一直抱怨这样的客户怎么能这样子呢， 在没开始做之前又不说，做完后各种要求。好了不抱怨了不管怎样还是有所成长的。</p>
-<hr>
+        <p><img src="http://i.imgur.com/eIYJeHa.jpg" alt=""></p>
 <a id="more"></a>
-<h3 id="CRLF注入"><a href="#CRLF注入" class="headerlink" title="CRLF注入"></a>CRLF注入</h3><p>当我看这标题的时候我觉得好高端勒没有接触过，但我去查询资料发现也是很久的东西了有些很老的东西自己并没有去关注所以很多不知道也是正常的，但有些比较老的东西在某些时刻还真的特别有用吧，学无止境。</p>
-<p>CRLF注入在OWASP 里面被称为HTTP拆分攻击（HTTP Splitting），CRLF是”回车 + 换行”（\r\n）的简称。在HTTP协议中，HTTP Header与HTTP Body是用两个CRLF分隔的，浏览器就是根据这两个CRLF来取出HTTP 内容并显示出来。所以，一旦我们能够控制HTTP 消息头中的字符，注入一些恶意的换行，这样我们就能注入一些会话Cookie或者HTML代码，所以CRLF Injection又叫HTTP Response Splitting，简称HRS。</p>
-<p>看了P牛写的文档，是遇到了一个案例通过CRLF来突破浏览器的Filter执行XSS，只有数据包中http头含有X-XSS-Protection并且值为0的时候，浏览器才不会开启filter。</p>
-<p>但我本地搭建环境，是以PHP搭建的结果复现了好久都没有成功，后来一问PHP根本就没毛这鸟问题看到评论：“PHP header()函数中提到了：从 PHP 4.4 之后，该函数防止一次发送多个报头。这是对头部注入攻击的保护措施。”</p>
-<p>被误导了搞了好久拿webgoat来搭搭建复现</p>
-<p>第一次访问返回包：302</p>
-<p><img src="http://i.imgur.com/wQBrUC5.png" alt="http://i.imgur.com/wQBrUC5.png"> </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 302 Moved Temporarily</span><br><span class="line"></span><br><span class="line">Server: Apache-Coyote/1.1</span><br><span class="line"></span><br><span class="line">Location: http://192.168.0.102/WebGoat/attack?Screen=2&amp;menu=100&amp;fromRedirect=yes&amp;language=en</span><br><span class="line"></span><br><span class="line">Content-Type: text/html;charset=ISO-8859-1</span><br><span class="line"></span><br><span class="line">Content-Length: 0</span><br><span class="line"></span><br><span class="line">Date: Wed, 22 Jun 2016 11:19:10 GMT</span><br></pre></td></tr></table></figure>
-<p>在language字段注入非法数据：en%0d%0a%0d%0a%0d%0a</p>
-<p><img src="http://i.imgur.com/szlBqHS.png" alt="http://i.imgur.com/szlBqHS.png"> </p>
-<p>注入特殊字符后，HTTP响应数据包中Content-Length:0告诉浏览器响应已经结束，构造payload提交</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">foobar</span><br><span class="line">Content-Length: 0</span><br><span class="line"></span><br><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Content-Type: text/html</span><br><span class="line">Content-Length: 47</span><br><span class="line"></span><br><span class="line">&lt;html&gt;Hacked J&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">foobar%0d%0aContent-Length:%200%0d%0a%0d%0aHTTP/1.1%20200%20OK%0d%0aContent-Type:%20text/html%0d%0aContent-Length:%2047%0d%0a%0d%0a&lt;html&gt;Hacked J&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="http://i.imgur.com/lMkHq6J.png" alt="http://i.imgur.com/lMkHq6J.png"> </p>
-<p>成功CRLF注入。</p>
-<p>只有在IE下才会弹。真是尴尬</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://192.168.0.102/WebGoat/attack?Screen=138&amp;menu=100&amp;fromRedirect=yes&amp;language=foobar%0d%0aContent-Length:%200%0d%0a%0d%0aHTTP/1.1%20200%20OK%0d%0aContent-Type:%20text/html%0d%0aContent-Length:%2047%0d%0a%0d%0a&lt;html&gt;&lt;script&gt;alert(document.domain)&lt;/script&gt;&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<p>Windows系统中同时使用CR和LF两个字符表示新行。linux系统需要使用LF，Mac OS使用CR.</p>
-<hr>
-<p>其实自己理解还不是很深，希望以后用到的时候继续深入研究</p>
-<p>更坚信自己以后要走的路，Linux渗透</p>
+<p>2014年的文章很多app链接都失效了找不到可以实验的app程序，自己也简单的了解这方面，可能不会再更新Android方面的了。<br>想法很美好，但在过程中总会遇到各种各样的问题。</p>
+<h3 id="什么是安卓应用组件？"><a href="#什么是安卓应用组件？" class="headerlink" title="什么是安卓应用组件？"></a>什么是安卓应用组件？</h3><p>应用组件是组成安卓应用的关键部分。每个应用都是由一个或者多个组件组成，并且每个都是单独调用。这里主要分为4个主要的组件，介绍如下：</p>
+<blockquote>
+<p>Activity: 是一个应用程序组件，提供一个屏幕，用户可以用来交互为了完成某项任务（例如打电话，发短信等）</p>
+<p>Service(服务): 在后台提供持续性服务，并不需要一个用户界面</p>
+<p>Content Providers(内容提供者): 以表格的形式把数据展现给外部的应用。换句话来说Content Providers可以被认为是连接两个处理器的之间的接口。</p>
+<p>Broadcast Receivers(广播接收器): 广播接收器是一个接受系统级广播的组件，（例如电量低，重启，耳机插入等）尽管大部分广播都是由系统发出，应用本身也可以发起广播。</p>
+</blockquote>
+<p>这个应用有两个Activity。第一个Activity接受一个密码输入，如果用户输入了正确的密码他就能够进入“私有区域”，否则他会收到一个密码错误的警告。本文中使用的密码为”password”。我们这里使用黑盒测试的方法来尝试突破密码保护。<br><img src="http://i.imgur.com/SKQGwnu.png" alt=""></p>
+<p>当输入正确密码之后：<br><img src="http://i.imgur.com/2cGG85Z.png" alt=""></p>
+<p>实验环境：<br>一个没有root手机或者安卓虚拟机，或者Emulator虚拟机等<br>apktool反编译工具</p>
+<p>apktool介绍<br>反编译一个apk<br>1.decode<br>该命令用于进行反编译apk文件<br><code>java -jar apktool -d c:\a.apk</code></p>
+<p>语法：apktool d <file.apk> <dir></dir></file.apk></p>
+<p><file.apk> 代表了要反编译的apk路私。</file.apk></p>
+<p><dir> 反编译后存储位置</dir></p>
+<p>如果遇到一些问题用-f强制执行<br><code>apktool d -f  &lt;file.apk&gt; &lt;dir&gt;</code></p>
+<p>2.build<br>打包：<br><code>java -jar apktool -b c:\crack</code></p>
+<p>3.install-framework<br>该命令用于为APKTool安装特定的framework-res.apk文件，以方便进行反编译一些与ROM相互依赖的APK文件</p>
+<p><code>http://www.2cto.com/kf/201606/517304.html</code><br>这里有一份apktool源码分析，说的很不错，但是我看不懂。</p>
+<p>反编译apk文件<br><code>apktool d testapp.apk</code><br><img src="http://i.imgur.com/HhC6nNM.png" alt=""></p>
+<p>会在当前目录下手机 testapp目录。<br><img src="http://i.imgur.com/tnlxZbV.png" alt=""></p>
+<p>其中有一个AndroidManifest.xml文件，通过打开分析<br><img src="http://i.imgur.com/6FbdLgf.png" alt=""></p>
+<p>找到两个Activity组件，通过这个文件获得以下信息：<br>com.isi.testapp  是包的名称<br>com.isi.test.app.MainActivity  主页面，就是登录页<br>com.isi.testapp.Welcome  登录之后的页面</p>
+<p>文件语法参考文档：<br><code>http://blog.csdn.net/zhaoyazhi2129/article/details/27234245</code></p>
+<p>攻击脆弱的Activity组件：<br>有几个实现方法。</p>
+<p>1.使用Activity Manager启动敏感的Activity<br>2.使用Drozer进行攻击</p>
+<p>首先使用Activity Manager启动敏感的Activity<br>连获取一个android的shell<br><img src="http://i.imgur.com/Lj5y8JC.png" alt=""></p>
+<p><img src="http://i.imgur.com/jXuPuKB.png" alt=""></p>
+<p>达到目的.</p>
+<h3 id="保护应用程序组件"><a href="#保护应用程序组件" class="headerlink" title="保护应用程序组件"></a>保护应用程序组件</h3><p>1.设置android:exported属性为false</p>
+<blockquote>
+<p>在AndroidManifest.xml文件中，我们应该设置下面的属性来保护应用。在我们的案例中com.isi.testapp.Welcome是我们要保护的Activity<br>上面的代码限制了其他应用或者系统组件调用这个Activity。只有拥有和这个应用相同的user id才能够访问这个Activity。<br>通过权限控制限制访问</p>
+<blockquote>
+<p>android:exported属性不是唯一的限制措施。我们还可以通过基于权限的方法来定制一个Activity的权限。这个可以限制应用之间的访问权限。</p>
+</blockquote>
+</blockquote>
 
       
     </div>
@@ -376,28 +394,18 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/CRLF/" rel="tag">#CRLF</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/16/XML注入笔记/" rel="next" title="XML注入笔记">
-                <i class="fa fa-chevron-left"></i> XML注入笔记
+              <a href="/2017/01/21/Android-Drozer渗透测试框架/" rel="next" title="Android Drozer渗透测试框架">
+                <i class="fa fa-chevron-left"></i> Android Drozer渗透测试框架
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/01/后台登录框Time-based-Blind/" rel="prev" title="后台登录框Time-based Blind">
-                后台登录框Time-based Blind <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -423,8 +431,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/21/CRLF注入/"
-           data-title="CRLF注入" data-url="http://yoursite.com/2016/06/21/CRLF注入/">
+      <div class="ds-thread" data-thread-key="2017/01/26/Android-应用组件攻防/"
+           data-title="Android 应用组件攻防" data-url="http://yoursite.com/2017/01/26/Android-应用组件攻防/">
       </div>
     
   </div>
@@ -515,7 +523,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CRLF注入"><span class="nav-number">1.</span> <span class="nav-text">CRLF注入</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是安卓应用组件？"><span class="nav-number">1.</span> <span class="nav-text">什么是安卓应用组件？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#保护应用程序组件"><span class="nav-number">2.</span> <span class="nav-text">保护应用程序组件</span></a></li></ol></div>
             
           </div>
         </section>
