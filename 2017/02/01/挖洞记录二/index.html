@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://i.imgur.com/lpjsqfa.jpg">
 <meta property="og:image" content="http://i.imgur.com/i7vcdaL.jpg">
 <meta property="og:image" content="http://i.imgur.com/z9Nn4eM.jpg">
-<meta property="og:updated_time" content="2017-02-01T08:32:39.286Z">
+<meta property="og:updated_time" content="2017-02-01T08:34:55.038Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="挖洞记录二">
 <meta name="twitter:description">
@@ -339,22 +339,15 @@
         <p><img src="http://i.imgur.com/oPFFazf.jpg" alt=""></p>
 <a id="more"></a>
 <p>之前报名了一家线上Linux运维培训，把课程都学完了只懂个大概运维基础，但想想这样的培训机构很好赚钱呀踩用录播的方式，每期学员大概有100人。 开到了20多期，一期就有30万赚，确实很好赚呀,此时来检测一下这网站的安全如何。</p>
-<p>先收集信息<br>www.<strong><em>*earn.com<br>通过多地ping ip没有发现cdn或其它lvs等架构<br>`115.159.</em>.<em><code>得到IP地址为腾讯云的主机，所以首先没有先通过主站，想着会比较安全，通过一些常用的扫描器也找不出什么来，所以转换思路从旁站入手：
-收集了几个域名：</code>www.</em></strong>ker.com<br>fe.<strong><em>arn.com<br>ios.</em></strong>rn.com<br>m.<em>*</em>ker.com`</p>
+<p>先收集信息<br>www.<em>**</em>earn.com<br>通过多地ping ip没有发现cdn或其它lvs等架构<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">115.159.*.*</span><br></pre></td></tr></table></figure></p>
+<p>得到IP地址为腾讯云的主机，所以首先没有先通过主站，想着会比较安全，通过一些常用的扫描器也找不出什么来，所以转换思路从旁站入手：<br>收集了几个域名：</p>
+<p><code>www.***ker.com
+fe.***arn.com
+ios.***rn.com
+m.***ker.com</code></p>
 <p>发现原来这个网站还有和其它公司一起合作，称为某课。 主要也是培训机构<br>查询网站域名注册哪里：<br>所有者    hua chao<br>所有者联系邮箱    <code>info@***ua.net</code><br>邮箱地址指向：<code>***ua.net</code>  也是有点关系的，很有可能这套网站源码是他们自己开发的。</p>
 <p>这里找了一下从<br><code>fe.***arn.com</code><br>因为这是他们新开的课程，所以扫了下敏感信息：<br><img src="http://i.imgur.com/ngrxXju.jpg" alt=""></p>
-<p>然后通过github去下载源码，发现项目是私有的所以下载不成功。<br>然后把上面这些config这些敏感信息下载回来分析<br><code>https://git.oschina.net/***123</code><br>使用这个做为代码部署，但项目是私密的所以无法看到<br>通过常规社工手段和社工库查找之后得到如下信息：<br>用户信息：<br>        <code>***qing123
-            景*清
-            158*****019
-            江苏南京市南京***大学
-        ***924
-        庄*军
-        11*****121
-            一些信息：
-                http://tieba.baidu.com/home/main?un=***E4%B5%C4%C***%DD&amp;fr=pb
-                1991年 10月
-                出生地江苏-常州-溧阳市
-                居住地江苏-南京-玄武区</code></p>
+<p>然后通过github去下载源码，发现项目是私有的所以下载不成功。<br>然后把上面这些config这些敏感信息下载回来分析<br><code>https://git.oschina.net/***123</code><br>使用这个做为代码部署，但项目是私密的所以无法看到<br>通过常规社工手段和社工库查找之后得到如下信息：<br>用户信息：<br>        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">***qing123</span><br><span class="line">	景*清</span><br><span class="line">	158*****019</span><br><span class="line">	江苏南京市南京***大学</span><br><span class="line">***924</span><br><span class="line">庄*军</span><br><span class="line">11*****121</span><br><span class="line">	一些信息：</span><br><span class="line">		http://tieba.baidu.com/home/main?un=***E4%B5%C4%C***%DD&amp;fr=pb</span><br><span class="line">		1991年 10月</span><br><span class="line">		出生地江苏-常州-溧阳市</span><br><span class="line">		居住地江苏-南京-玄武区</span><br></pre></td></tr></table></figure></p>
 <p>这里猜测为技术人员,想git clone下载源码发现需要登录。这里通过一些社工库也没找到信息。</p>
 <p>思考了一会转展思路，从主站下手，靠着感觉，坚信着一定有漏洞，所以不花5分钟就找到漏洞了<br><img src="http://i.imgur.com/GZYMcOz.jpg" alt=""><br>果然存在注入,完全没有过滤，得到数据库如下：<code>***ker</code>，包括discuz论坛的， 网站用户和论坛用户加起来有几万， <img src="http://i.imgur.com/JkKL2mH.jpg" alt=""><br><img src="http://i.imgur.com/lpjsqfa.jpg" alt=""></p>
 <p>但没有去脱， 找到了管理员表获取信息：<br><img src="http://i.imgur.com/i7vcdaL.jpg" alt=""></p>
