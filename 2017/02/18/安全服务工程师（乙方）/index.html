@@ -84,22 +84,18 @@
 
 
 
-<meta name="description">
+<meta name="description" content="加密文章">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android Drozer渗透测试框架">
-<meta property="og:url" content="http://yoursite.com/2017/01/21/Android-Drozer渗透测试框架/index.html">
+<meta property="og:title" content="安全服务工程师（乙方）">
+<meta property="og:url" content="http://yoursite.com/2017/02/18/安全服务工程师（乙方）/index.html">
 <meta property="og:site_name" content="EvilAnne's Blog">
-<meta property="og:description">
-<meta property="og:image" content="http://i.imgur.com/fAIINDB.jpg">
-<meta property="og:image" content="http://i.imgur.com/egGq72i.jpg">
-<meta property="og:image" content="http://i.imgur.com/kvXXo1w.jpg">
-<meta property="og:image" content="http://i.imgur.com/OE4FOVM.jpg">
-<meta property="og:image" content="http://i.imgur.com/zgizHJf.jpg">
-<meta property="og:updated_time" content="2017-01-21T08:20:03.966Z">
+<meta property="og:description" content="加密文章">
+<meta property="og:image" content="http://i.imgur.com/6DzLcbb.jpg">
+<meta property="og:updated_time" content="2017-02-18T07:12:44.527Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android Drozer渗透测试框架">
-<meta name="twitter:description">
-<meta name="twitter:image" content="http://i.imgur.com/fAIINDB.jpg">
+<meta name="twitter:title" content="安全服务工程师（乙方）">
+<meta name="twitter:description" content="加密文章">
+<meta name="twitter:image" content="http://i.imgur.com/6DzLcbb.jpg">
 
 
 
@@ -119,8 +115,8 @@
 
 <script>
     (function(){
-        if(''){
-            if (prompt('请输入文章密码') !== ''){
+        if('ghost'){
+            if (prompt('请输入文章密码') !== 'ghost'){
                 alert('密码错误！');
                 history.back();
             }
@@ -128,7 +124,7 @@
     })();
 </script>
 
-  <title> Android Drozer渗透测试框架 | EvilAnne's Blog </title>
+  <title> 安全服务工程师（乙方） | EvilAnne's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -268,7 +264,7 @@
             
             
               
-                Android Drozer渗透测试框架
+                安全服务工程师（乙方）
               
             
           </h1>
@@ -280,8 +276,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-01-21T16:16:59+08:00" content="2017-01-21">
-              2017-01-21
+            <time itemprop="dateCreated" datetime="2017-02-18T15:12:01+08:00" content="2017-02-18">
+              2017-02-18
             </time>
           </span>
 
@@ -294,8 +290,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Android/" itemprop="url" rel="index">
-                    <span itemprop="name">Android</span>
+                  <a href="/categories/网络安全/" itemprop="url" rel="index">
+                    <span itemprop="name">网络安全</span>
                   </a>
                 </span>
 
@@ -310,8 +306,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/01/21/Android-Drozer渗透测试框架/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/21/Android-Drozer渗透测试框架/" itemprop="commentsCount"></span>
+                <a href="/2017/02/18/安全服务工程师（乙方）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/18/安全服务工程师（乙方）/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -334,34 +330,56 @@
       
 
       
-        <p><img src="http://i.imgur.com/fAIINDB.jpg" alt=""></p>
+        <p><img src="http://i.imgur.com/6DzLcbb.jpg" alt=""></p>
 <a id="more"></a>
-<h3 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h3><p>Android安全方面前几年已经开始火了，称现在过年还有2个星期时间才下定决心想入个门，可能太高深的难以深入，点到为止吧，毕竟时间太有限很多东西都需要去学，之前看到招聘网站渗透测试工程师的岗位都要求会简单的App安全测试，Android我觉得也偏向于二进制安全，会涉及到挺多汇编的东西，但简单的测试也包括应用层也就是OWASP TOP 10，这里尽量一天更新一篇文章吧，先从简单的框架先找个程序玩一下。</p>
-<h3 id="Drozer介绍"><a href="#Drozer介绍" class="headerlink" title="Drozer介绍"></a>Drozer介绍</h3><p>Drozer一款针对Android系统的安全测试框架。</p>
-<p>优点：drozer可以大大缩减Android安全评估的耗时，通过攻击测试暴露Android APP的漏洞。</p>
-<p>drozer运行在Android模拟器和真实设备上，它不需要USB调试或其他开发即可使用。</p>
-<p>下载地址：<br><code>https://github.com/mwrlabs/drozer</code></p>
-<p>下载Drozer和Agent.apk:<br>在Android需要装上agent.apk这个文件，否则Drozer无法连接成功。<br><code>https://www.mwrinfosecurity.com/products/drozer/community-edition/</code></p>
-<h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><p>这里我用的Android是Emulator</p>
-<p>通过adb来安装agent.apk</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb install agent.apk</span><br></pre></td></tr></table></figure>
-<p>安装成功后会显示drozer图标：<br><img src="http://i.imgur.com/egGq72i.jpg" alt=""></p>
-<p>开启Android Drozer代理并启动守护服务</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb forward tcp:31415 tcp:31415</span><br></pre></td></tr></table></figure>
-<p>使用drozer连接设备：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drozer console connect</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://i.imgur.com/kvXXo1w.jpg" alt=""></p>
-<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">列出所有模块</span><br><span class="line">list</span><br><span class="line"></span><br><span class="line">获取包信息</span><br><span class="line">run app.package.list</span><br><span class="line"></span><br><span class="line">使用”-f”选项搜索特定的包名</span><br><span class="line">run app.package.list –f (string to be searched)</span><br><span class="line"></span><br><span class="line">查看制定包的信息：</span><br><span class="line">run app.package.info –a (package name)</span><br></pre></td></tr></table></figure>
-<h3 id="Drozer进行安全检测"><a href="#Drozer进行安全检测" class="headerlink" title="Drozer进行安全检测"></a>Drozer进行安全检测</h3><p>先安装测试程序：testapp.apk<br><code>adb install testapp.apk</code></p>
-<p>打开应用程序：<br><img src="http://i.imgur.com/OE4FOVM.jpg" alt=""><br>显示需要密码登录，我们通过Drozer攻击绕过登录。</p>
-<p>查看包利列表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">drozer Console (v2.3.4)</span><br><span class="line">dz&gt; run app.package.list </span><br><span class="line">......</span><br><span class="line">com.isi.testapp (testapp)</span><br><span class="line">com.jiongji.andriod.card (百词斩)</span><br><span class="line">......</span><br></pre></td></tr></table></figure></p>
-<p>testapp应用程序<br><code>com.isi.testapp</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">dz&gt; run app.package.attacksurface com.isi.testapp</span><br><span class="line">Attack Surface:</span><br><span class="line">  2 activities exported</span><br><span class="line">  0 broadcast receivers exported</span><br><span class="line">  0 content providers exported</span><br><span class="line">  0 services exported</span><br><span class="line">    is debuggable</span><br></pre></td></tr></table></figure>
-<p> testapp中有两个activity暴露,（这里我也只是一知半解，后面学习会从头开始，基础开始了解不会直接用框架来检测）</p>
-<p>攻击暴露的Activity,查看app的activity。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dz&gt; run app.activity.info -a com.isi.testapp</span><br><span class="line">Package: com.isi.testapp</span><br><span class="line">  com.isi.testapp.MainActivity</span><br><span class="line">    Permission: null</span><br><span class="line">  com.isi.testapp.Welcome</span><br><span class="line">    Permission: null</span><br></pre></td></tr></table></figure></p>
-<p>列出了两个应用中暴露出来的activity<br>com.isi.testapp.MainActivity很显然是主界面</p>
-<p>Com.isi.testapp.Welcome看名字像是登录后的界面</p>
-<p>使用如下命令启动:<br><code>dz&gt; run app.activity.start --component com.isi.testapp com.isi.testapp.Welcome</code><br>成功绕过密码登录：<br><img src="http://i.imgur.com/zgizHJf.jpg" alt=""></p>
-<p>这也是我参考其它文章然后照着操作破解第一个app应用吧。但是远远不够这只是一个开始。</p>
+<p>在某公司呆了一年时间，不算真正的乙方没有接接触到应急响应，其它安全服务的项目太少，然后就搞高难度的站比较多，有时候搞不下来真的是很没有信心再继续这样下去。</p>
+<p>所以打算一年时间来学习这些方面内容，也加上自己学习过程中所整理的资料链接，然后加入到我的培训课程中。</p>
+<blockquote>
+<p>参考sec-wiki的资料<br>也会加入自己对这方面的了解</p>
+</blockquote>
+<h3 id="职位描述："><a href="#职位描述：" class="headerlink" title="职位描述："></a>职位描述：</h3><blockquote>
+<p>1.负责安全服务项目中的实施部分，包括：漏洞扫描、渗透测试、安全基线检查、代码审计、应急响应等；<br>2.爆发高危漏洞后时行漏洞的分析应急；<br>3.对公司安全产品的后端支持；<br>4.掌握专业文档编写技巧；<br>5.关注行业态势和热点。</p>
+</blockquote>
+<h4 id="学习路线："><a href="#学习路线：" class="headerlink" title="学习路线："></a>学习路线：</h4><h5 id="安全概念和资讯"><a href="#安全概念和资讯" class="headerlink" title="安全概念和资讯"></a>安全概念和资讯</h5><h6 id="安全概念和资讯-1"><a href="#安全概念和资讯-1" class="headerlink" title="安全概念和资讯"></a>安全概念和资讯</h6><p>时间：3周</p>
+<blockquote>
+<p>前期安全知识的补充学习。</p>
+</blockquote>
+<p>熟悉基本的安全术语和概念（SQL注入、上传漏洞、XSS、CSRF、一句话木马、渗透测试、应急响应、风险评估、等级保护等）；<br>阅读OWASP TOP 10 从漏洞分类和漏洞成因寻找安全漏洞的切入点 Link ；<br>阅读经典的网络安全相关书籍 Link ；<br>安全资讯来源：Secwiki、Reddit、Twitter、Weibo、Wooyun、Freebuf、91ri等。</p>
+<h6 id="安全工具使用"><a href="#安全工具使用" class="headerlink" title="安全工具使用"></a>安全工具使用</h6><p>时间：2周</p>
+<blockquote>
+<p>熟悉常用的安全测试工具和自家的产品。</p>
+</blockquote>
+<p>综合漏洞扫描工具的安装使用：Nessus、X-scan、Nexpose等；<br>Web漏洞扫描的工具的安装使用和漏洞验证：AppScan、AWVS、WebInspect等；<br>辅助工具的安装和使用：Nmap、Burp Suite、Sqlmap、wireshark、iptables等；<br>辅助脚本的收集和修改：各种漏洞利用的Exploit、定制化高的扫描脚本、字典等；<br>自家安全设备策略部署和使用。</p>
+<h6 id="渗透测试"><a href="#渗透测试" class="headerlink" title="渗透测试"></a>渗透测试</h6><p>时间：3周</p>
+<blockquote>
+<p>熟悉渗透测试报告的格式和内容。</p>
+</blockquote>
+<p>渗透测试流程：《渗透测试授权书》规定渗透时间和范围、《渗透测试免责书》描述渗透测试可能带来的危害、规定时间实施渗透测试，输出《渗透测试报告》，指导甲方进行漏洞修复；<br>大多数情况下，渗透测试质量中技术能力占40%，报告书写占60%，必须熟练掌握各种word、exel基本功能；<br>具体的技术细节、工具使用可参考老美的PTES渗透测试指南 Link。</p>
+<h6 id="安全基线检查"><a href="#安全基线检查" class="headerlink" title="安全基线检查"></a>安全基线检查</h6><p>时间：3周</p>
+<blockquote>
+<p>学习安全业务与系统操作。</p>
+</blockquote>
+<p>不同的客户，不同的业务系统，有不同的安全基线文档，大致分类无外乎几种：从账户、授权、补丁、日志、冗余端口和服务等层面对主机系统、中间件和数据库进行配置[检查]；<br>阅读外网流出的各家厂商的安全基线检查内容，如：运营商-移动 Link ；<br>掌握不同版本的配置方法和配置项，可自行安装系统、中间件、数据库进行实操。</p>
+<h6 id="应急响应"><a href="#应急响应" class="headerlink" title="应急响应"></a>应急响应</h6><p>时间：5周</p>
+<blockquote>
+<p>学习渗透实战，并了解应急响应流程。</p>
+</blockquote>
+<p>应急响应流程可分为两类：实时性应急响应和入侵后应急响应；<br>实时性应急响应：大多为DDOS攻击，首要进行流量分析，若流量打满，能做的就是反查攻击IP，逆向渗透；若网络设备会话数被打满或者主机系统的CPU、内存、会话数被打满，可通过交换机做端口镜像，使用wireshark、tcpdump进行抓包，分析流量特征，确认攻击类型，在网络设备或安全设备上做相应阻断策略；<br>攻击后应急响应：通过分析恶意文件和日志，查找入侵来源IP和入侵者所利用的漏洞，提出漏洞修补方案，并逆向追踪入侵者；<br>应急响应对工程师的要求较为复杂，需多熟悉不同操作系统、应用、中间件、数据库特性，且能熟练使用编程语言或者vim等编辑器对较大的日志进行数据整理，还需要日常多多积累各种攻击特征和防护策略；<br>多阅读网上已有的应急响应的文档，学习逆向分析思路。</p>
+<h6 id="代码审计"><a href="#代码审计" class="headerlink" title="代码审计"></a>代码审计</h6><p>时间：5周</p>
+<blockquote>
+<p>学习代码审计流程和实战。</p>
+</blockquote>
+<p>熟悉代码审计工具的安装使用，可参考SecWiki上的文章 Link ；<br>根据工具报告验证问题是否为误报，并跟踪分析；<br>参看各大资讯平台、论坛、旧杂志的文章，学习白盒分析思路；<br>Exploit编写。</p>
+<h6 id="安全边界建设"><a href="#安全边界建设" class="headerlink" title="安全边界建设"></a>安全边界建设</h6><p>时间：3周</p>
+<blockquote>
+<p>学习安全边界检查工作的流程和内容。</p>
+</blockquote>
+<p>安全边界检查的工作重点可总结为：根据是各个信息区域否需要外网接入、是否需要访问内部核心网络等行为特点，将信息安全系统划分为边界接入域、网络基础设施域、计算机安全域、运维管理域，并对现有网络是否有按照该标准做相应的安全域划分，或判断其划分是否合理；<br>可参考规范：IATF Link。</p>
+<h6 id="安全规范"><a href="#安全规范" class="headerlink" title="安全规范"></a>安全规范</h6><p>时间：3周</p>
+<blockquote>
+<p>学习国标和行业规范。</p>
+</blockquote>
+<p>除去技术细节了，尚有不少风险评估和等级保护测评的工作，直接读规范有助对项目全局的把控；<br>国标规范有：<br>《信息系统安全等级保护基本要求》；<br>《信息安全风险评估规范》；<br>行业规范有：<br>《网银121号文》 ；<br>《中国银联移动支付技术规范》等等；</p>
 
       
     </div>
@@ -386,17 +404,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/16/心情随笔五/" rel="next" title="心情随笔五">
-                <i class="fa fa-chevron-left"></i> 心情随笔五
+              <a href="/2017/02/13/函数相关、装饰器/" rel="next" title="函数相关、装饰器">
+                <i class="fa fa-chevron-left"></i> 函数相关、装饰器
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/01/26/Android-应用组件攻防/" rel="prev" title="Android 应用组件攻防">
-                Android 应用组件攻防 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -422,8 +436,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/01/21/Android-Drozer渗透测试框架/"
-           data-title="Android Drozer渗透测试框架" data-url="http://yoursite.com/2017/01/21/Android-Drozer渗透测试框架/">
+      <div class="ds-thread" data-thread-key="2017/02/18/安全服务工程师（乙方）/"
+           data-title="安全服务工程师（乙方）" data-url="http://yoursite.com/2017/02/18/安全服务工程师（乙方）/">
       </div>
     
   </div>
@@ -514,7 +528,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简述"><span class="nav-number">1.</span> <span class="nav-text">简述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Drozer介绍"><span class="nav-number">2.</span> <span class="nav-text">Drozer介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本操作"><span class="nav-number">3.</span> <span class="nav-text">基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用命令"><span class="nav-number">3.1.</span> <span class="nav-text">常用命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Drozer进行安全检测"><span class="nav-number">4.</span> <span class="nav-text">Drozer进行安全检测</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#职位描述："><span class="nav-number">1.</span> <span class="nav-text">职位描述：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#学习路线："><span class="nav-number">1.1.</span> <span class="nav-text">学习路线：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安全概念和资讯"><span class="nav-number">1.1.1.</span> <span class="nav-text">安全概念和资讯</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#安全概念和资讯-1"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">安全概念和资讯</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#安全工具使用"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">安全工具使用</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#渗透测试"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">渗透测试</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#安全基线检查"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">安全基线检查</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#应急响应"><span class="nav-number">1.1.1.5.</span> <span class="nav-text">应急响应</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#代码审计"><span class="nav-number">1.1.1.6.</span> <span class="nav-text">代码审计</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#安全边界建设"><span class="nav-number">1.1.1.7.</span> <span class="nav-text">安全边界建设</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#安全规范"><span class="nav-number">1.1.1.8.</span> <span class="nav-text">安全规范</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
