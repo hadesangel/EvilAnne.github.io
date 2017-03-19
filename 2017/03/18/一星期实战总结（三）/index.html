@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://i.imgur.com/E5IgaFS.jpg">
 <meta property="og:image" content="http://i.imgur.com/PLJKKfb.jpg">
 <meta property="og:image" content="http://i.imgur.com/BpcjznC.jpg">
-<meta property="og:updated_time" content="2017-03-18T04:15:16.158Z">
+<meta property="og:updated_time" content="2017-03-18T04:31:03.531Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一星期实战总结（三）">
 <meta name="twitter:description">
@@ -343,7 +343,7 @@
 <hr>
 <p>之前获取了某服务商两台Linux机器，简称A、B，A服务器里面有某业务平台，只可惜密码无法解出来登不进后台，B服务器两张网卡，一张连接于内网，通过Socks5代理，扫了一些网段得到两台Cisco路由器可执行命令，其它暂时都没有找到其它机器，从Cisco看到vlan划分，争取下个星期把这个内网搞定吧。</p>
 <p>某域商名子站，比较有意思的是，在COOKIES中的选择语言存在文件包含，只可惜普通用户，<br><img src="http://i.imgur.com/P4vhK7L.jpg" alt=""><br>这里后面加了<code>%00.jpg</code>，是因为包含的时候后面还有程序后缀如这样<code>lang=luange.php</code>把<code>.</code>号给截断。</p>
-<p>然后星期四早上发来一批列表，好像又是诈骗的，看了目标站是<code>WordPress</code>和<code>CloudFlare CDN</code>，通过大牛给我的工具，结果扫描，发现对应一个源码包，下载回来分析，得到mysql数据库密码、以及<code>Cpanel</code>控制管理面板，<code>Cpanel</code>是国外比较出名的虚拟主机管理系统，数据库管理是在登录<code>Cpanel</code>才能看得到，无法直接访问，没有思路暂搞有关联的站点。<br>然后像赌博的站点，存在<code>phpMyadmin</code>，然后找到备份文件连接进去把数据库脱了出来，然后继续撸其它站点，一个阿里云服务器，网站程序是电商，看了一下使用jsp，就用前段时间爆出来的漏洞就抄了，把<code>last</code>记录先拖出来，然后把源码下回来分析，发现数据库在阿里云里面，也是内网，因为服务器外网连接不了SSH，后来想了很久，通过mysql命令无回显执行<code>mysql -uroot -p123456 -e &quot;show database&quot;</code>，再接前导图数据库：<code>mysqldump -uroot -p123456 dbname &gt; /tmp/sql.sql</code>,通过<code>tar czvf ./sql.tar.gz ./sql.sql</code> 把3G多的数据库打包成400mb,发现这命令挺好用的。目标达成继续换下一个站点。<br>看都懒着看了，这么多洞，把后台数据库脱了出来，通过<code>hash-id</code>识别是<code>SHA-256</code>所以没有办法解密，就把数据库大部分信息拖了出来。</p>
+<p>然后星期四早上发来一批列表，好像又是诈骗的，看了目标站是<code>WordPress</code>和<code>CloudFlare CDN</code>，通过大牛给我的工具，结果扫描，发现对应一个源码包，下载回来分析，得到mysql数据库密码、以及<code>Cpanel</code>控制管理面板，<code>Cpanel</code>是国外比较出名的虚拟主机管理系统，数据库管理是在登录<code>Cpanel</code>才能看得到，无法直接访问，没有思路暂搞有关联的站点。<br>然后像赌博的站点，存在<code>phpMyadmin</code>，然后找到备份文件连接进去把数据库脱了出来，然后继续撸其它站点，一个阿里云服务器，网站程序是电商，看了一下使用jsp，就用前段时间爆出来的漏洞就秒了，把<code>last</code>记录先拖出来，然后把源码下回来分析，发现数据库在阿里云里面，也是内网，因为服务器外网连接不了SSH，后来想了很久，通过mysql命令无回显执行<code>mysql -uroot -p123456 -e &quot;show database&quot;</code>，再接着导出数据库：<code>mysqldump -uroot -p123456 dbname &gt; /tmp/sql.sql</code>,通过<code>tar czvf ./sql.tar.gz ./sql.sql</code> 把3G多的数据库打包成400mb,发现这命令挺好用的。目标达成继续换下一个站点。<br>看都懒着看了，这么多洞，把后台数据库脱了出来，通过<code>hash-id</code>识别是<code>SHA-256</code>所以没有办法解密，就把数据库大部分信息拖了出来。</p>
 <p>因为搞这批列表是某局要搞的，当时发过来的信息猜测，应该是被人搞过一遍了，没发现多少信息，之前遇到<code>Wordpress</code>或者<code>CloudFlare CDN</code>都会放弃，曾经我也是这样觉得没什么希望，但是现在的我不一样，就算再难搞的站，我也会趴下一些信息。也不会放弃，最后也没有继续深入去发现更多的有关联的东西，因为也只是义务帮别人搞。</p>
 <p>总结：很多站点找到了漏洞，找到了一个点没有去思考和深入，这也是我所欠缺的，绕过这些问题，去思考这是我目前要做的。<br>其次发现字典是渗透中非常重要，根据哪一套系统能扫出什么，包括遇到<code>HTTP Basic</code>还是<code>MSSQL</code>或者其它服务还有机会去尝试,<code>爆破的艺术</code></p>
 <hr>
