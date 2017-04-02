@@ -94,7 +94,7 @@
 （起初创立这博客只是想记录我的成长记录，经过一年写了很多文章，现在要写一些比较敏感的东西，所以也不会写太详细，自己能看得懂足已，第一，这个博客我从来没发过到某些圈子里承认是我自己的，其二，或许别人可以通过各种手段查找到此博客，期三，我没留下">
 <meta property="og:image" content="http://i.imgur.com/RPx1DfH.jpg">
 <meta property="og:image" content="http://i.imgur.com/dQjsSXv.jpg">
-<meta property="og:updated_time" content="2017-04-02T14:40:15.527Z">
+<meta property="og:updated_time" content="2017-04-02T14:41:48.628Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一星期实战总结（四）">
 <meta name="twitter:description" content="一直以为不可能会完成的任务，怀疑着自己的能力。 只要压力够大趋使着你，你都可以做的很优秀。对于这星期的成果，我很满意，在此记录一下我所做过的，还有我所想的。
@@ -337,7 +337,9 @@
         <p><img src="http://i.imgur.com/RPx1DfH.jpg" alt=""></p>
 <p>一直以为不可能会完成的任务，怀疑着自己的能力。 只要压力够大趋使着你，你都可以做的很优秀。<br>对于这星期的成果，我很满意，在此记录一下我所做过的，还有我所想的。</p>
 <p>（起初创立这博客只是想记录我的成长记录，经过一年写了很多文章，现在要写一些比较敏感的东西，所以也不会写太详细，自己能看得懂足已，第一，这个博客我从来没发过到某些圈子里承认是我自己的，其二，或许别人可以通过各种手段查找到此博客，期三，我没留下任何的联系方式还有留言，就此写下我的经历和成长。）</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>其实这批列表在我手里放了一个多月，之前通过Struts爆出来的漏洞搞了一个，只是停留在边界上那时候也花了挺多时间，后来被管理员发现修洞删Shell。<br>因为某地区实在搞得没有思路，所以换下目标，这批列表大概有将近30多个站，很多都是国外比较出名的，可以说是世界顶尖科技，其实这里我不窃取资料这些对我来说不感兴趣，其次，我的目标也不是这些资料。</p>
+<a id="more"></a>
+<hr>
+<p>其实这批列表在我手里放了一个多月，之前通过Struts爆出来的漏洞搞了一个，只是停留在边界上那时候也花了挺多时间，后来被管理员发现修洞删Shell。<br>因为某地区实在搞得没有思路，所以换下目标，这批列表大概有将近30多个站，很多都是国外比较出名的，可以说是世界顶尖科技，其实这里我不窃取资料这些对我来说不感兴趣，其次，我的目标也不是这些资料。</p>
 <h3 id="初次试探"><a href="#初次试探" class="headerlink" title="初次试探"></a>初次试探</h3><p>对于这30多个站点，我的任务只需拿下一个足已，所以刚开始通过一些批量扫描，没有对一个站点而进行深入看能不能找到软柿子，然后写了一个Python小脚本，用第三方工具查找所有子域名：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'domain.txt'</span>) <span class="keyword">as</span> f:</span><br><span class="line">	<span class="keyword">for</span> x <span class="keyword">in</span> f:</span><br><span class="line">		domain = x.strip(<span class="string">'\n'</span>)</span><br><span class="line">		print(<span class="string">"&#123;&#125; Scan..."</span>).format(domain)</span><br><span class="line">		python_run = <span class="string">"python subDomainsBrute.py &#123;&#125; -f dict/subnames.txt"</span>.format(domain)</span><br><span class="line">		<span class="keyword">if</span> <span class="keyword">not</span> python_run:</span><br><span class="line">			<span class="keyword">pass</span></span><br><span class="line">		<span class="keyword">else</span>:</span><br><span class="line">			print(python_run)</span><br><span class="line">			os.system(python_run)</span><br></pre></td></tr></table></figure>
 <p>然后批量扫敏感信息泄漏，各种扫描都扔，后来结果不是很理想，太小看这些国外站了，其实也是在我意料之中。后来爆了Struts漏洞，这里可以看<code>一星期实战总结（二）</code>所遇到的问题，之后就放弃暂时没搞。</p>
@@ -509,7 +511,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#初次试探"><span class="nav-number">1.1.</span> <span class="nav-text">初次试探</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重整旗鼓"><span class="nav-number">1.2.</span> <span class="nav-text">重整旗鼓</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后续"><span class="nav-number">1.3.</span> <span class="nav-text">后续</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#初次试探"><span class="nav-number">1.</span> <span class="nav-text">初次试探</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重整旗鼓"><span class="nav-number">2.</span> <span class="nav-text">重整旗鼓</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后续"><span class="nav-number">3.</span> <span class="nav-text">后续</span></a></li></ol></div>
             
           </div>
         </section>
