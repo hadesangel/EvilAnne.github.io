@@ -94,7 +94,7 @@
 （起初创立这博客只是想记录我的成长记录，经过一年写了很多文章，现在要写一些比较敏感的东西，所以也不会写太详细，自己能看得懂足已，第一，这个博客我从来没发过到某些圈子里承认是我自己的，其二，或许别人可以通过各种手段查找到此博客，期三，我没留下">
 <meta property="og:image" content="http://i.imgur.com/RPx1DfH.jpg">
 <meta property="og:image" content="http://i.imgur.com/dQjsSXv.jpg">
-<meta property="og:updated_time" content="2017-04-02T14:41:48.628Z">
+<meta property="og:updated_time" content="2017-04-02T14:43:35.254Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一星期实战总结（四）">
 <meta name="twitter:description" content="一直以为不可能会完成的任务，怀疑着自己的能力。 只要压力够大趋使着你，你都可以做的很优秀。对于这星期的成果，我很满意，在此记录一下我所做过的，还有我所想的。
@@ -356,7 +356,7 @@
 <p>第二天继续的时候发现WebShell和木马已经被管理员清除了，很害怕管理员修复了漏洞然后此次花了大量时间找口子就要Get Over了，还好没修复，重新传了Shell也通过木马成功上线，再次尝试通过<code>Mimikatz</code>直接获取了域管理员。真是运气真好。</p>
 <p><code>net view</code>获取同段机器,这个段的机器都挺重要的包括<code>ERP</code>，各种数据服务器，然后成果是这样，花了大量的时间：<br>图太大没有办法完全截完。<br><img src="http://i.imgur.com/dQjsSXv.jpg" alt=""></p>
 <p>其间还遇到了各种各样的问题使用了如何把获取到的东西如何传输出来，以及winrar命令、隐藏自己。</p>
-<h3 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h3><p>经过一个星期之后，说之前拿到的某样东西没有什么样，所以又重新开刀搞起，过了一个多时间多多少少细节已记不清楚了。</p>
+<h3 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h3><p>经过一个星期之后，说之前拿到的某样东西没用什么样，所以又重新开刀搞起，过了一个多星期多多少少细节已记不清楚了。</p>
 <p>大概思路是，为了能获取某台系统的数据，必需拿到数据库，因为有域控，所以拿下内网任何一台机器也不在话下，最主要的是只能通过Cobalt Strike来操作，这玩意传输数据太慢了，没有像Windows远控一样强大可以控制屏幕，其实是有vnc功能的只是需要安装，不想被发现所以就换了一条思路。</p>
 <p>买了台vps搞了个远控，发现远控种上去远程屏幕是黑屏，测试了好几台也是如此，怀疑是远控比较久远只能支持Windows2003以及Win7界面，对win2008 r2只能以黑屏显示。所以来了挺长时间时间相接的远控。连之。<br>但又发现了新问题，因为屏幕被锁定了需要按<code>Ctrl+Alt+Del</code>才能进入到登录界面，后来找了<code>远程修改组策略</code>，主要是先修改本地的组策略，最后更新在目标服务器上。Links:<code>https://wenku.baidu.com/view/33c85e0af12d2af90242e63e.html</code>。可能是加入了域的原因和本地复现有所不同。</p>
 <p>大概等到了晚上8点的时候，找了一台没业务系统的服务器，重启之。后来就进入到了各种<code>Mstsc</code>连接机器。<br>看数据库有100G之多，找些重点想要的数据库脱了出来，经过本地还原。发现数据库表有上千个之多，又要找到很多关联性的数据库。这时候我已经放弃了。</p>
