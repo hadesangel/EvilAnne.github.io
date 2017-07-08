@@ -84,22 +84,19 @@
 
 
 
-<meta name="description" content="Volume Shadow小技巧
-在一次内网渗透中，传的内网渗透工具一直都是放C盘的垃圾箱里，也没太注意细节，如果你有掌握在极短的时间里获取想要的东西可以不用太在意这些，除此之外系统正在使用的文件比如SAM是无法直接拷贝的；这次主要记录卷副本，通过Windows自带的命令来实现隐藏程序以及拷贝系统无法拷贝的文件。">
+<meta name="description" content="在一次内网渗透中，传的内网渗透工具一直都是放C盘的垃圾箱里，也没太注意细节，如果你有掌握在极短的时间里获取想要的东西可以不用太在意这些，除此之外系统正在使用的文件比如SAM是无法直接拷贝的；这次主要记录卷副本，通过Windows自带的命令来实现隐藏程序以及拷贝系统无法拷贝的文件。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Volume Shadow小技巧">
 <meta property="og:url" content="http://yoursite.com/2017/07/08/Volume-Shadow小技巧/index.html">
 <meta property="og:site_name" content="EvilAnne's Blog">
-<meta property="og:description" content="Volume Shadow小技巧
-在一次内网渗透中，传的内网渗透工具一直都是放C盘的垃圾箱里，也没太注意细节，如果你有掌握在极短的时间里获取想要的东西可以不用太在意这些，除此之外系统正在使用的文件比如SAM是无法直接拷贝的；这次主要记录卷副本，通过Windows自带的命令来实现隐藏程序以及拷贝系统无法拷贝的文件。">
+<meta property="og:description" content="在一次内网渗透中，传的内网渗透工具一直都是放C盘的垃圾箱里，也没太注意细节，如果你有掌握在极短的时间里获取想要的东西可以不用太在意这些，除此之外系统正在使用的文件比如SAM是无法直接拷贝的；这次主要记录卷副本，通过Windows自带的命令来实现隐藏程序以及拷贝系统无法拷贝的文件。">
 <meta property="og:image" content="http://i.imgur.com/RJ0HpSJ.jpg">
 <meta property="og:image" content="http://i.imgur.com/nOV0Poq.jpg">
 <meta property="og:image" content="http://i.imgur.com/HlppbjV.jpg">
-<meta property="og:updated_time" content="2017-07-08T09:08:45.022Z">
+<meta property="og:updated_time" content="2017-07-08T09:10:01.696Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Volume Shadow小技巧">
-<meta name="twitter:description" content="Volume Shadow小技巧
-在一次内网渗透中，传的内网渗透工具一直都是放C盘的垃圾箱里，也没太注意细节，如果你有掌握在极短的时间里获取想要的东西可以不用太在意这些，除此之外系统正在使用的文件比如SAM是无法直接拷贝的；这次主要记录卷副本，通过Windows自带的命令来实现隐藏程序以及拷贝系统无法拷贝的文件。">
+<meta name="twitter:description" content="在一次内网渗透中，传的内网渗透工具一直都是放C盘的垃圾箱里，也没太注意细节，如果你有掌握在极短的时间里获取想要的东西可以不用太在意这些，除此之外系统正在使用的文件比如SAM是无法直接拷贝的；这次主要记录卷副本，通过Windows自带的命令来实现隐藏程序以及拷贝系统无法拷贝的文件。">
 <meta name="twitter:image" content="http://i.imgur.com/RJ0HpSJ.jpg">
 
 
@@ -335,7 +332,7 @@
       
 
       
-        <h1 id="Volume-Shadow小技巧"><a href="#Volume-Shadow小技巧" class="headerlink" title="Volume Shadow小技巧"></a>Volume Shadow小技巧</h1><p><img src="http://i.imgur.com/RJ0HpSJ.jpg" alt=""></p>
+        <p><img src="http://i.imgur.com/RJ0HpSJ.jpg" alt=""></p>
 <pre><code>在一次内网渗透中，传的内网渗透工具一直都是放C盘的垃圾箱里，也没太注意细节，如果你有掌握在极短的时间里获取想要的东西可以不用太在意这些，除此之外系统正在使用的文件比如SAM是无法直接拷贝的；这次主要记录卷副本，通过Windows自带的命令来实现隐藏程序以及拷贝系统无法拷贝的文件。
 </code></pre><a id="more"></a>
 <h3 id="什么是卷影副本"><a href="#什么是卷影副本" class="headerlink" title="什么是卷影副本?"></a>什么是卷影副本?</h3><p>卷影副本，也称为快照，是存储在 Data Protection Manager (DPM) 服务器上的副本的时间点副本。副本是文件服务器上单个卷的受保护共享、文件夹和文件的完整时间点副本。</p>
@@ -500,7 +497,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Volume-Shadow小技巧"><span class="nav-number">1.</span> <span class="nav-text">Volume Shadow小技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是卷影副本"><span class="nav-number">1.0.1.</span> <span class="nav-text">什么是卷影副本?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#支持操作系统"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">支持操作系统!</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用命令"><span class="nav-number">1.0.2.</span> <span class="nav-text">常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#vssadmin命令"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">vssadmin命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建卷副本"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">创建卷副本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除"><span class="nav-number">1.0.3.</span> <span class="nav-text">删除</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是卷影副本"><span class="nav-number">1.</span> <span class="nav-text">什么是卷影副本?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#支持操作系统"><span class="nav-number">1.1.</span> <span class="nav-text">支持操作系统!</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用命令"><span class="nav-number">2.</span> <span class="nav-text">常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#vssadmin命令"><span class="nav-number">2.1.</span> <span class="nav-text">vssadmin命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建卷副本"><span class="nav-number">2.2.</span> <span class="nav-text">创建卷副本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除"><span class="nav-number">3.</span> <span class="nav-text">删除</span></a></li></ol></div>
             
           </div>
         </section>
