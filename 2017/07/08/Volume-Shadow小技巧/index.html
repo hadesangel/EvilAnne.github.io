@@ -93,7 +93,7 @@
 <meta property="og:image" content="http://i.imgur.com/RJ0HpSJ.jpg">
 <meta property="og:image" content="http://i.imgur.com/nOV0Poq.jpg">
 <meta property="og:image" content="http://i.imgur.com/HlppbjV.jpg">
-<meta property="og:updated_time" content="2017-07-08T09:10:01.696Z">
+<meta property="og:updated_time" content="2017-07-08T09:13:23.638Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Volume Shadow小技巧">
 <meta name="twitter:description" content="在一次内网渗透中，传的内网渗透工具一直都是放C盘的垃圾箱里，也没太注意细节，如果你有掌握在极短的时间里获取想要的东西可以不用太在意这些，除此之外系统正在使用的文件比如SAM是无法直接拷贝的；这次主要记录卷副本，通过Windows自带的命令来实现隐藏程序以及拷贝系统无法拷贝的文件。">
@@ -333,8 +333,10 @@
 
       
         <p><img src="http://i.imgur.com/RJ0HpSJ.jpg" alt=""></p>
-<pre><code>在一次内网渗透中，传的内网渗透工具一直都是放C盘的垃圾箱里，也没太注意细节，如果你有掌握在极短的时间里获取想要的东西可以不用太在意这些，除此之外系统正在使用的文件比如SAM是无法直接拷贝的；这次主要记录卷副本，通过Windows自带的命令来实现隐藏程序以及拷贝系统无法拷贝的文件。
-</code></pre><a id="more"></a>
+<blockquote>
+<p>在一次内网渗透中，传的内网渗透工具一直都是放C盘的垃圾箱里，也没太注意细节，如果你有掌握在极短的时间里获取想要的东西可以不用太在意这些，除此之外系统正在使用的文件比如SAM是无法直接拷贝的；这次主要记录卷副本，通过Windows自带的命令来实现隐藏程序以及拷贝系统无法拷贝的文件。</p>
+</blockquote>
+<a id="more"></a>
 <h3 id="什么是卷影副本"><a href="#什么是卷影副本" class="headerlink" title="什么是卷影副本?"></a>什么是卷影副本?</h3><p>卷影副本，也称为快照，是存储在 Data Protection Manager (DPM) 服务器上的副本的时间点副本。副本是文件服务器上单个卷的受保护共享、文件夹和文件的完整时间点副本。</p>
 <h4 id="支持操作系统"><a href="#支持操作系统" class="headerlink" title="支持操作系统!"></a>支持操作系统!</h4><p>Windows Server 2003, Windows Server 2008, Windows Server 2003 R2, Windows Server 2008 R2, Windows Server 2012, Windows 8</p>
 <h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p>Powershell下执行：<br><code>gwmi Win32_ShadowCopy|select -Property DeviceObject</code>查看是否有创建卷影<br><img src="http://i.imgur.com/nOV0Poq.jpg" alt=""><br>当前系统没有显示为空</p>
