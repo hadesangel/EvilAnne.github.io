@@ -114,7 +114,7 @@
 <meta property="og:image" content="https://i.imgur.com/LbnfkiT.jpg">
 <meta property="og:image" content="https://i.imgur.com/RNsEk9P.jpg">
 <meta property="og:image" content="https://i.imgur.com/CqPkKpo.jpg">
-<meta property="og:updated_time" content="2017-10-27T16:12:50.930Z">
+<meta property="og:updated_time" content="2017-10-27T16:17:16.499Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Wifi安全笔记">
 <meta name="twitter:description" content="最近在玩无线大致把常规的攻击手法复习了一遍、看的是某VIP网站上面一套Kali的视频其中一章无线安全，然后我就盗了个号免费看，这部课程理论非常全面但我也只能似懂非懂的感觉然后记录下来，无线安全来来回回这样其实玩2个月无线和2年无线没有区别，如果想再进一步深造那就是各种理论知识。">
@@ -392,6 +392,7 @@
 <h4 id="扫描附近AP"><a href="#扫描附近AP" class="headerlink" title="扫描附近AP"></a>扫描附近AP</h4><p><code>iw dev wlan0 scan | grep SSID</code><br><img src="https://i.imgur.com/YtkrRmq.jpg" alt=""></p>
 <p><code>iw dev wlan0 scan | egrep &quot;DS\ Parameter\ set|SSID&quot;</code><br><img src="https://i.imgur.com/9eGmpII.jpg" alt=""></p>
 <p><code>iwlist wlan0 scanning | egrep &quot;ESSID|Channel&quot;</code><br><img src="https://i.imgur.com/c4XRsAy.jpg" alt=""></p>
+<p>123</p>
 <h4 id="添加删除帧听端口"><a href="#添加删除帧听端口" class="headerlink" title="添加删除帧听端口"></a>添加删除帧听端口</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">service network-manager stop  //关闭本地网络连接                      </span><br><span class="line">iw dev wlan2 interface add wlan0mon <span class="built_in">type</span> monitor    </span><br><span class="line">tcpdump <span class="_">-s</span> 0 -i wlan0mon -p                     </span><br><span class="line">iw dev wlan0mon interface del</span><br></pre></td></tr></table></figure>
 <h4 id="WAP安全系统"><a href="#WAP安全系统" class="headerlink" title="WAP安全系统"></a>WAP安全系统</h4><p>Wi-Fi Protected Access<br>802.11组为提高无线安全，开发两个新的链路层加密协议<br>    Temporal Key Integrity Protocol (TKIP)<br>        WPA1 (较之WEP可动态改变密钥)<br>    Counter Mode with CBC-MAC (CCMP)<br>        WP2                                       </p>
 <h5 id="WPA加密两种安全类型"><a href="#WPA加密两种安全类型" class="headerlink" title="WPA加密两种安全类型"></a>WPA加密两种安全类型</h5><p>WPA个人: 使用预设共享密钥实现身份验证<br>WPA企业: 使用800.1X和Radius服务器实现AAA   </p>
