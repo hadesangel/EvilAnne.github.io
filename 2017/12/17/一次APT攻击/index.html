@@ -85,14 +85,12 @@
 
 
 
-<meta name="description" content="一次APT攻击
-我把此次攻击定义为APT而没有用任何钓鱼之类的手法才叫APT,经时一个月的时间这一个月在找各种各样的信息始终都没有放弃过,有同事和我一起搞总是断断续续的放弃而我还在一直坚持着,像这类的渗透之前也做过几次长时间的渗透。看心情再放出来吧毕竟把这种东西放在网上并不好所以打码也是检查了很多次。">
+<meta name="description" content="我把此次攻击定义为APT而没有用任何钓鱼之类的手法才叫APT,经时一个月的时间这一个月在找各种各样的信息始终都没有放弃过,有同事和我一起搞总是断断续续的放弃而我还在一直坚持着,像这类的渗透之前也做过几次长时间的渗透。看心情再放出来吧毕竟把这种东西放在网上并不好所以打码也是检查了很多次。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一次APT攻击">
 <meta property="og:url" content="http://yoursite.com/2017/12/17/一次APT攻击/index.html">
 <meta property="og:site_name" content="EvilAnne's Blog">
-<meta property="og:description" content="一次APT攻击
-我把此次攻击定义为APT而没有用任何钓鱼之类的手法才叫APT,经时一个月的时间这一个月在找各种各样的信息始终都没有放弃过,有同事和我一起搞总是断断续续的放弃而我还在一直坚持着,像这类的渗透之前也做过几次长时间的渗透。看心情再放出来吧毕竟把这种东西放在网上并不好所以打码也是检查了很多次。">
+<meta property="og:description" content="我把此次攻击定义为APT而没有用任何钓鱼之类的手法才叫APT,经时一个月的时间这一个月在找各种各样的信息始终都没有放弃过,有同事和我一起搞总是断断续续的放弃而我还在一直坚持着,像这类的渗透之前也做过几次长时间的渗透。看心情再放出来吧毕竟把这种东西放在网上并不好所以打码也是检查了很多次。">
 <meta property="og:image" content="https://i.imgur.com/Up29m0R.jpg">
 <meta property="og:image" content="https://i.imgur.com/JBEhyuS.jpg">
 <meta property="og:image" content="https://i.imgur.com/L4sdZhX.jpg">
@@ -118,11 +116,10 @@
 <meta property="og:image" content="https://i.imgur.com/5VmR3rl.jpg">
 <meta property="og:image" content="https://i.imgur.com/XuOTbPk.jpg">
 <meta property="og:image" content="https://i.imgur.com/jAm0i0i.jpg">
-<meta property="og:updated_time" content="2017-12-17T09:10:23.016Z">
+<meta property="og:updated_time" content="2017-12-17T09:16:29.616Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一次APT攻击">
-<meta name="twitter:description" content="一次APT攻击
-我把此次攻击定义为APT而没有用任何钓鱼之类的手法才叫APT,经时一个月的时间这一个月在找各种各样的信息始终都没有放弃过,有同事和我一起搞总是断断续续的放弃而我还在一直坚持着,像这类的渗透之前也做过几次长时间的渗透。看心情再放出来吧毕竟把这种东西放在网上并不好所以打码也是检查了很多次。">
+<meta name="twitter:description" content="我把此次攻击定义为APT而没有用任何钓鱼之类的手法才叫APT,经时一个月的时间这一个月在找各种各样的信息始终都没有放弃过,有同事和我一起搞总是断断续续的放弃而我还在一直坚持着,像这类的渗透之前也做过几次长时间的渗透。看心情再放出来吧毕竟把这种东西放在网上并不好所以打码也是检查了很多次。">
 <meta name="twitter:image" content="https://i.imgur.com/Up29m0R.jpg">
 
 
@@ -358,7 +355,7 @@
       
 
       
-        <h1 id="一次APT攻击"><a href="#一次APT攻击" class="headerlink" title="一次APT攻击"></a>一次APT攻击</h1><p><img src="https://i.imgur.com/Up29m0R.jpg" alt=""></p>
+        <p><img src="https://i.imgur.com/Up29m0R.jpg" alt=""></p>
 <p>我把此次攻击定义为APT而没有用任何钓鱼之类的手法才叫APT,经时一个月的时间这一个月在找各种各样的信息始终都没有放弃过,有同事和我一起搞总是断断续续的放弃而我还在一直坚持着,像这类的渗透之前也做过几次长时间的渗透。看心情再放出来吧毕竟把这种东西放在网上并不好所以打码也是检查了很多次。</p>
 <a id="more"></a>
 <p>初步信息收集判断：<br>Linux+php+mysql+自研发程序</p>
@@ -413,7 +410,9 @@ uid=0(root) gid=500(taviso)</code></p>
 <p><img src="https://i.imgur.com/5VmR3rl.jpg" alt=""><br>执行不了交互式mysql查询，直接通过-e选项<br><img src="https://i.imgur.com/XuOTbPk.jpg" alt=""><br>然后直接mysqldump导出，通过cat命令查看当前数据库,并没有什么有用的数据。</p>
 <p>又重新回到主站,发现存在直接上传webshell<br><img src="https://i.imgur.com/jAm0i0i.jpg" alt=""></p>
 <p>通过上传直接获取主站WebShell，主站处于AWS主机中的172网段，并且没有连接数据库。<br>暂时放弃。</p>
-<h2 id="思路又再次卡死"><a href="#思路又再次卡死" class="headerlink" title="思路又再次卡死"></a>思路又再次卡死</h2><p>黎明出现。<br>某人把之前扔给跑的Linux密码破解出来了,用破出来的密码尝试登录cs001，可登录，并通过cs001这台服务器查看操作历史记录连接多台数据库，并且与之前注入点一台也可连接。<br>通过信息收集。发现主业务数据库连接并把会员表以及会员密码脱了下来。</p>
+<p>思路又再次卡死</p>
+<hr>
+<p>黎明出现。<br>某人把之前扔给跑的Linux密码破解出来了,用破出来的密码尝试登录cs001，可登录，并通过cs001这台服务器查看操作历史记录连接多台数据库，并且与之前注入点一台也可连接。<br>通过信息收集。发现主业务数据库连接并把会员表以及会员密码脱了下来。</p>
 <p>总结：<br>    历时1个月时间，总体来说有很多思想上面的东西很欠缺，其一，在主站查找漏洞的时候没有深入的进行扫描二级子目录，漏掉了可直接上传WebShell的页面<br>    最后关键成功点还是在于能破出Linux密码。<br>    此次渗透和细心运气分不开，如果没有找到那一台跳板其它都是将无用，不过结果还有一点不足，但至少还在努力。<br>    需要进行学习的是，清除Linux日志、留后门维持访问、以及清析的思路加上跳跃思路。</p>
 
       
@@ -563,7 +562,7 @@ uid=0(root) gid=500(taviso)</code></p>
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一次APT攻击"><span class="nav-number">1.</span> <span class="nav-text">一次APT攻击</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#思路又再次卡死"><span class="nav-number">1.1.</span> <span class="nav-text">思路又再次卡死</span></a></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
